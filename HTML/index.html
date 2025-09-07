@@ -1,0 +1,318 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/general_styles.css" />
+    <link rel="stylesheet" href="/styles/variables.css" />
+    <link rel="stylesheet" href="/styles/header.css" />
+    <link rel="stylesheet" href="/styles/hero.css" />
+    <link rel="stylesheet" href="/styles/career.css" />
+    <link rel="stylesheet" href="/styles/footer.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="/javascript/header.js"></script>
+    <script src="/javascript/auth-loader.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="hamburger_menu">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <div class="logo">
+          <div class="logo-text">
+            <p class="logo-name">eRBe</p>
+          </div>
+        </div>
+      <div class="search_bar_container">
+        <div class="dropdown_menu">
+          <select class="category-select">
+            <option value="" disabled selected>Categories</option>
+            <option value="math">
+              <i class="fa-solid fa-calculator"></i>
+              Math
+            </option>
+            <option value="programming">
+              <i class="fa-solid fa-code"></i>
+              Programming
+            </option>
+            <option value="teaching-certification">
+              <i class="fa-solid fa-graduation-cap"></i>
+              Öğretmenlik Sertifikası
+            </option>
+            <option value="student-exam">
+              <i class="fa-solid fa-clipboard-check"></i>
+              Milli Öğrenci Kabul Sınavı
+            </option>
+            <option value="ict-literacy">
+              <i class="fa-solid fa-laptop-code"></i>
+              ICT Literacy
+            </option>
+            <option value="html-css">
+              <i class="fa-brands fa-html5"></i>
+              HTML/CSS
+            </option>
+            <option value="javascript">
+              <i class="fa-brands fa-js-square"></i>
+              JavaScript
+            </option>
+            <option value="advanced-math">
+              <i class="fa-solid fa-square-root-variable"></i>
+              Advanced Math
+            </option>
+            <option value="calculus">
+              <i class="fa-solid fa-chart-line"></i>
+              Calculus I-II
+            </option>
+            <option value="linear-algebra">
+              <i class="fa-solid fa-vector-square"></i>
+              Linear Algebra
+            </option>
+            <option value="cpp">
+              <i class="fa-brands fa-cuttlefish"></i>
+              C++
+            </option>
+            <option value="english">
+              <i class="fa-solid fa-language"></i>
+              English (A1-A2, B1)
+            </option>
+          </select>
+        </div>
+        <input type="text" class="search_bar" placeholder="Search here ..." />
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <div class="icons">
+        <i id="cart_icon" class="fa-solid fa-basket-shopping"></i>
+        <i id="wishlist_icon" class="fa-solid fa-heart"></i>
+        <i id="user_icon" class="fa-solid fa-circle-user"></i>
+      </div>
+    </header>
+    <main class="main">
+      <section class="hero">
+        <i id="chevron-left" class="fa-solid fa-chevron-left"></i>
+        <div class="hero_text">
+          <h1>Master AI & Technology Skills</h1>
+          <p>Learn cutting-edge technologies with hands-on projects and expert guidance.</p>
+          <button>Explore Courses</button>
+        </div>
+        <div class="hero_image">
+          <img src="/images/hero/hero_ai.jpg" alt="no found" />
+        </div>
+        <i id="chevron-right" class="fa-solid fa-chevron-right"></i>
+      </section>
+      
+      <section class="career-section">
+        <div class="career-content">
+          <h2>Ready to reimagine your career?</h2>
+          <p>Get the skills and real-world experience employers want with Career Accelerators.</p>
+        </div>
+      </section>
+
+      <section class="courses-section">
+        <div class="courses-container">
+          <div class="course-card">
+            <div class="course-icon">
+              <i class="fa-brands fa-js-square"></i>
+            </div>
+            <h3>Javascript</h3>
+            <p>Master modern JavaScript development with hands-on projects and real-world applications.</p>
+          </div>
+          
+          <div class="course-card">
+            <div class="course-icon">
+              <i class="fa-brands fa-html5"></i>
+            </div>
+            <h3>HTML/CSS</h3>
+            <p>Learn web development fundamentals with HTML5 and CSS3 for creating beautiful websites.</p>
+          </div>
+          
+          <div class="course-card">
+            <div class="course-icon">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <h3>ICT Literacy</h3>
+            <p>Develop essential digital skills and computer literacy for the modern workplace.</p>
+          </div>
+          
+          <div class="course-card">
+            <div class="course-icon">
+              <i class="fa-solid fa-calculator"></i>
+            </div>
+            <h3>Math (VII-IX)</h3>
+            <p>Build strong mathematical foundations from basic concepts to advanced problem-solving.</p>
+          </div>
+          
+          <div class="course-card">
+            <div class="course-icon">
+              <i class="fa-solid fa-square-root-variable"></i>
+            </div>
+            <h3>Math (I-XII)</h3>
+            <p>Advanced mathematics covering comprehensive curriculum from grades 1 to 12.</p>
+          </div>
+        </div>
+      </section>
+      
+    </main>
+    <footer class="footer">
+      <!-- Newsletter Section -->
+      <div class="newsletter-section">
+        <div class="newsletter-container">
+          <div class="newsletter-content">
+            <h3>Stay Updated with Latest Courses</h3>
+            <p>Get exclusive access to new courses, tips, and industry insights delivered to your inbox.</p>
+          </div>
+          <div class="newsletter-form">
+            <input type="email" placeholder="Enter your email address" class="newsletter-input">
+            <button class="newsletter-btn">
+              <span>Subscribe</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Footer Content -->
+      <div class="footer-main">
+        <div class="footer-container">
+          <!-- Brand Section -->
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <div class="logo-icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <h3>SkillSprint</h3>
+            </div>
+            <p class="brand-description">
+              Empowering learners with practical skills and real-world experience. 
+              Join thousands of students who have transformed their careers with our courses.
+            </p>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook" class="social-link">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="#" aria-label="Twitter" class="social-link">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+              <a href="#" aria-label="Instagram" class="social-link">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="#" aria-label="LinkedIn" class="social-link">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="#" aria-label="YouTube" class="social-link">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="#"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+              <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Our Courses</a></li>
+              <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Pricing</a></li>
+              <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Success Stories</a></li>
+              <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Career Support</a></li>
+            </ul>
+          </div>
+
+          <!-- Courses -->
+          <div class="footer-section">
+            <h4>Popular Courses</h4>
+            <ul class="footer-links">
+              <li><a href="#"><i class="fa-solid fa-chevron-right"></i> JavaScript Mastery</a></li>
+              <li><a href="#"><i class="fa-solid fa-chevron-right"></i> HTML/CSS Fundamentals</a></li>
+              <li><a href="#"><i class="fa-solid fa-chevron-right"></i> ICT Literacy</a></li>
+              <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Advanced Mathematics</a></li>
+              <li><a href="#"><i class="fa-solid fa-chevron-right"></i> English Language</a></li>
+            </ul>
+          </div>
+
+          <!-- Support -->
+          <div class="footer-section">
+            <h4>Support & Resources</h4>
+            <ul class="footer-links">
+              <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Help Center</a></li>
+              <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Community Forum</a></li>
+              <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Documentation</a></li>
+              <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Contact Support</a></li>
+              <li><a href="#"><i class="fa-solid fa-chevron-right"></i> System Status</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="footer-section contact-section">
+            <h4>Get in Touch</h4>
+            <div class="contact-info">
+              <div class="contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                  <span>Email</span>
+                  <a href="mailto:info@skillsprint.com">info@skillsprint.com</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                  <span>Phone</span>
+                  <a href="tel:+15551234567">+1 (555) 123-4567</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                  <span>Address</span>
+                  <span>123 Education St, Learning City, LC 12345</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-container">
+          <div class="footer-bottom-left">
+            <p>&copy; 2024 SkillSprint. All rights reserved.</p>
+          </div>
+          <div class="footer-bottom-right">
+            <div class="legal-links">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms of Service</a>
+              <a href="#">Cookie Policy</a>
+              <a href="#">Refund Policy</a>
+            </div>
+            <div class="payment-methods">
+              <span>We Accept:</span>
+              <div class="payment-icons">
+                <i class="fa-brands fa-cc-visa"></i>
+                <i class="fa-brands fa-cc-mastercard"></i>
+                <i class="fa-brands fa-cc-paypal"></i>
+                <i class="fa-brands fa-cc-stripe"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/javascript/hero.js" type="module"></script>
+  </body>
+</html>

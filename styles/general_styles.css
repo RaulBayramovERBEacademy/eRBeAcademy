@@ -1,0 +1,45 @@
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--body);
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-family-heading);
+  margin: 0rem;
+}
+
+h4 {
+  font-size: var(--h4);
+  line-height: 1.25; /* 25px */
+}
+
+h3 {
+  font-size: var(--h3);
+  line-height: 1.25; /* 31.25px */
+}
+
+h2 {
+  font-size: var(--h2);
+  line-height: 1.25; /* 38.75px */
+}
+
+h1 {
+  font-size: var(--h1);
+  line-height: 1.25; /* 48.75px */
+  font-weight: 600;
+}
+
+p {
+  font-size: var(--small);
+  line-height: 1.25; /* 17.5px */
+}
+
+@media screen and (max-width: 768px) {
+}
