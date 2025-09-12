@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const originalHeader = document.querySelector("header").innerHTML;
   const originalHero = document.querySelector(".hero").innerHTML;
-  
+
   // Mobile menu auth button handlers - now handled by AuthLoader
   function setupMobileAuthButtons() {
     // Mobile auth buttons are now handled by the AuthLoader class
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
         menu.classList.add("mobile-menu");
         menu.innerHTML = menu_txt;
         header.appendChild(menu);
-        
+
         // Setup mobile auth buttons after menu is created
         setTimeout(() => {
           setupMobileAuthButtons();
@@ -107,9 +107,49 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   updateHeaderLayout();
   updateHero();
-  
+
   // User icon click handler is now handled by AuthLoader
   // Resize olunca da her seferinde kontrol et
   window.addEventListener("resize", updateHeaderLayout);
   window.addEventListener("resize", updateHero);
+
+  const subcategories = {
+    "teaching-certification": [
+      { value: "math-1-6", text: "Riyaziyyat (1-6)" },
+      { value: "math-1-12", text: "Riyaziyyat (1-12)" },
+      { value: "biology", text: "Biologiya" },
+      { value: "nature", text: "Təbiət" },
+      { value: "informatics", text: "İnformatika" },
+    ],
+    programming: [
+      { value: "html-css", text: "HTML/CSS" },
+      { value: "javascript", text: "JavaScript" },
+      { value: "cpp", text: "C++" },
+      { value: "nodejs", text: "Node.js" },
+    ],
+    // Digər kateqoriyalar üçün əlavə etmək olar
+  };
+
+  document
+    .getElementById("main-category")
+    .addEventListener("change", function () {
+      const selected = this.value;
+      const subSelect = document.getElementById("subcategory");
+      subSelect.innerHTML = "";
+      if (subcategories[selected]) {
+        subSelect.style.display = "inline-block";
+        subcategories[selected].forEach((sub) => {
+          const opt = document.createElement("option");
+          opt.value = sub.value;
+          opt.textContent = sub.text;
+          subSelect.appendChild(opt);
+        });
+        subSelect.insertAdjacentHTML(
+          "afterbegin",
+          `<option value="" disabled selected>Alt Kateqoriya seçin</option>`
+        );
+      } else {
+        subSelect.style.display = "none";
+      }
+    });
 });

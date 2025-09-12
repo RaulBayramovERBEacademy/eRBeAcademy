@@ -2,7 +2,7 @@
   --primary-color: #2563EB;
   --secondary-color: #22C55E;
   --thirty-color: #d1d5e0;
-  --gradient-color: linear-gradient(90deg, #1a1f36 0%, #3e4c8a 100%);
+  --gradient: linear-gradient(90deg, #2563EB, #22C55E);
   --black-100: rgba(0, 0, 0, 1); /* Full black */
   --black-75: rgba(0, 0, 0, 0.75); /* 75% opacity */
   --black-50: rgba(0, 0, 0, 0.5); /* 50% opacity */
@@ -22,6 +22,41 @@
   --small: 14px;
 }
 
+/* Kiçik ekran (mobil) */
+@media (max-width: 600px) {
+  :root {
+    --body: 14px;
+    --h1: 28px;
+    --h2: 24px;
+    --h3: 20px;
+    --h4: 18px;
+    --small: 12px;
+  }
+}
+
+/* Orta ekran (planşet) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  :root {
+    --body: 15px;
+    --h1: 34px;
+    --h2: 28px;
+    --h3: 22px;
+    --h4: 19px;
+    --small: 13px;
+  }
+}
+
+/* Böyük ekran (desktop) */
+@media (min-width: 1025px) {
+  :root {
+    --body: 16px;
+    --h1: 39px;
+    --h2: 31px;
+    --h3: 25px;
+    --h4: 20px;
+    --small: 14px;
+  }
+}
 :root {
   --font-family-base: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, sans-serif;

@@ -128,7 +128,6 @@ header .icons i:hover::after {
   transform: scaleX(1);
 }
 
-
 .mobile-header {
   display: flex;
   justify-content: unset;
@@ -249,7 +248,7 @@ header .icons i:hover::after {
 }
 
 .mobile-menu .enroll .sign-in {
-  background: var(--gradient-color);
+  background: var(--gradient);
   border: none;
   color: white;
 }
@@ -282,7 +281,6 @@ header .hamburger_menu:hover i {
   header .hamburger_menu {
     display: none;
   }
-  
 }
 
 @media (max-width: 768px) {
@@ -307,7 +305,7 @@ header .hamburger_menu:hover i {
     font-size: 24px;
     font-weight: bold;
   }
-  
+
   header .search_bar_container {
     display: none;
   }
@@ -393,7 +391,11 @@ ul li {
 }
 
 .category-select option:hover {
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(34, 197, 94, 0.05));
+  background: linear-gradient(
+    135deg,
+    rgba(37, 99, 235, 0.05),
+    rgba(34, 197, 94, 0.05)
+  );
   color: var(--primary-color);
   padding-left: 1.5rem;
   font-weight: 600;
@@ -404,7 +406,11 @@ ul li {
 }
 
 .category-select option:checked {
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
   color: white;
   font-weight: 600;
 }

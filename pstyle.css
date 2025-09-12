@@ -1,0 +1,72 @@
+/* ...existing code... */
+
+/* Inline Search Bar Design */
+/* Add to your CSS file (ör: general_styles.css veya ayrı bir yerde) */
+.countries, .adjacentCountries{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: left;
+  gap: 20px;
+  align-items: center; /* isteğe bağlı, ortalamak için */
+}
+
+/* Add to your CSS file (ör: general_styles.css) */
+.country-card {
+  flex: 1;
+  background-color: tomato;
+  max-width: 20%;
+  min-height: fit-content;
+  min-width: 100px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* Add to your CSS file (ör: general_styles.css) */
+.country-card img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+.inline-search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin: 24px 0;
+}
+
+.inline-search-bar input[type="text"] {
+  border: 1px solid #4f8cff;
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  outline: none;
+  width: 220px;
+  transition: border-color 0.2s;
+}
+
+.inline-search-bar input[type="text"]:focus {
+  border-color: #22223b;
+}
+
+.inline-search-bar button {
+  border: 1px solid #4f8cff;
+  border-radius: 0 8px 8px 0;
+  background: #4f8cff;
+  color: #fff;
+  font-size: 1rem;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.inline-search-bar button:hover {
+  background: #22223b;
+  color: #fff;
+}
+
+/* ...existing code... */

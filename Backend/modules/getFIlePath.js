@@ -13,6 +13,7 @@ export function getFilePath(url) {
     "/styles/general_styles.css": "../styles/general_styles.css",
     "/styles/hero.css": "../styles/hero.css",
     "/styles/career.css": "../styles/career.css",
+    "/styles/tutors.css": "../styles/tutors.css",
     "/styles/footer.css": "../styles/footer.css",
     "/styles/auth.css": "../styles/auth.css",
     "/javascript/header.js": "../javascript/header.js",
@@ -30,6 +31,9 @@ export function getFilePath(url) {
     "/images/Categories/living.jpg": "../images/Categories/living.jpg",
     "/images/Categories/bedroom.jpg": "../images/Categories/bedroom.jpg",
     "/images/Categories/decor.jpg": "../images/Categories/decor.jpg",
+    "/images/tutor_images/elladaBayramova.jpg": "../images/tutor_images/elladaBayramova.jpg",
+    "/images/tutor_images/ilkinMustafayev.jpg": "../images/tutor_images/ilkinMustafayev.jpg",
+    "/images/tutor_images/raulBayramov.jpg": "../images/tutor_images/raulBayramov.jpg",
   };
 
   const relativePath = routes[cleanUrl];
