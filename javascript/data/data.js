@@ -1,5 +1,5 @@
 const CATEGORY_LIST = [
-  { value: "programing", label: "Proqramlaşdırma" },
+  { value: "programming", label: "Proqramlaşdırma" },
   {
     value: "teaching-certification",
     label: "Müəllimlik Sertifikasiyası İmtahanına Hazırlıq",
@@ -36,6 +36,7 @@ const SUBCATEGORY_LIST = {
 };
 class Course {
   constructor({
+    id,
     iconClass,
     title,
     tutorName,
@@ -46,6 +47,7 @@ class Course {
     level,
     category,
     subcategory,
+    price,
   }) {
     if (!CATEGORY_LIST.some((cat) => cat.value === category)) {
       throw new Error(`Invalid category: ${category}`);
@@ -58,6 +60,7 @@ class Course {
         `Invalid subcategory: ${subcategory} for category: ${category}`
       );
     }
+    this.id = id; // unique identifier
     this.iconClass = iconClass; // FontAwesome icon class
     this.title = title;
     this.tutorName = tutorName;
@@ -68,11 +71,13 @@ class Course {
     this.level = level; // e.g. "Beginner", "Intermediate"
     this.category = category; // e.g. "programing"
     this.subcategory = subcategory; // e.g. "javascript"
+    this.price = price; // in USD
   }
 }
 
 const courses = [
   new Course({
+    id: 1001,
     iconClass: "fa-brands fa-js-square",
     title: "Javascript",
     tutorName: "Raul Bayramov",
@@ -82,10 +87,12 @@ const courses = [
     startDate: "2025-09-20",
     duration: "12 həftə",
     level: "Orta",
-    catgeory: "programing",
+    category: "programming",
     subcategory: "javascript",
+    price: 5000,
   }),
   new Course({
+    id: 1002,
     iconClass: "fa-brands fa-html5",
     title: "HTML/CSS",
     tutorName: "Raul Bayramov",
@@ -95,10 +102,12 @@ const courses = [
     startDate: "2025-09-25",
     duration: "6 həftə",
     level: "Başlanğıc",
-    category: "programing",
+    category: "programming",
     subcategory: "html-css",
+    price: 5000,
   }),
   new Course({
+    id: 1003,
     iconClass: "fa-solid fa-laptop-code",
     title: "ICT Literacy",
     tutorName: "Raul Bayramov",
@@ -108,10 +117,12 @@ const courses = [
     startDate: "2025-10-01",
     duration: "13 həftə",
     level: "Başlanğıc",
-    category: "student-courses",
+    category: "programming",
     subcategory: "ict-literacy",
+    price: 5000,
   }),
   new Course({
+    id: 1004,
     iconClass: "fa-solid fa-laptop-code",
     title: "Informatika",
     tutorName: "Raul Bayramov",
@@ -123,8 +134,10 @@ const courses = [
     level: "Başlanğıc",
     category: "teaching-certification",
     subcategory: "informatics",
+    price: 10000,
   }),
   new Course({
+    id: 1005,
     iconClass: "fa-solid fa-dna",
     title: "Bialogiya",
     tutorName: "Ellada Bayramova",
@@ -136,8 +149,10 @@ const courses = [
     level: "Başlanğıc",
     category: "teaching-certification",
     subcategory: "biology",
+    price: 10000,
   }),
   new Course({
+    id: 1006,
     iconClass: "fa-solid fa-tree-city",
     title: "Təbiət",
     tutorName: "Ellada Bayramova",
@@ -149,8 +164,10 @@ const courses = [
     level: "Başlanğıc",
     category: "teaching-certification",
     subcategory: "nature",
+    price: 10000,
   }),
   new Course({
+    id: 1007,
     iconClass: "fa-solid fa-square-root-variable",
     title: "Riyaziyyat (7-12)",
     tutorName: "Ilkin Mustafayev",
@@ -161,9 +178,11 @@ const courses = [
     duration: "26 həftə",
     level: "Başlanğıc",
     category: "teaching-certification",
-    subcategory: "math-1-12",
+    subcategory: "math-7-12",
+    price: 10000,
   }),
   new Course({
+    id: 1008,
     iconClass: "fa-solid fa-laptop-code",
     title: "Riyaziyyat (1-6)",
     tutorName: "Raul Bayramov",
@@ -175,8 +194,10 @@ const courses = [
     level: "Orta",
     category: "teaching-certification",
     subcategory: "math-1-6",
+    price: 10000,
   }),
   new Course({
+    id: 1009,
     iconClass: "fa-solid fa-square-root-variable",
     title: "Milli İmtahana Hazırlıq - Riyaziyyat",
     tutorName: "Ilkin Mustafayev",
@@ -188,6 +209,7 @@ const courses = [
     level: "Başlanğıc",
     category: "student-exam",
     subcategory: "math",
+    price: 8000,
   }),
   // Lazım olsa yeni kurslar əlavə edə bilərsiniz
 ];
