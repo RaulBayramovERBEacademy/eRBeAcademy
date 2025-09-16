@@ -1,6 +1,6 @@
 import { Course, courses } from "./data/data.js";
 
-function renderCourses(containerSelector) {
+function renderCourseCategories(containerSelector) {
   const container = document.querySelector(containerSelector);
   container.innerHTML = ""; // Clear previous content
 

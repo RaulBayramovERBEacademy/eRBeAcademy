@@ -1,8 +1,8 @@
 import path from "path";
 export function getFilePath(url) {
   // Remove query string from URL for routing
-  const cleanUrl = url.split('?')[0];
-  
+  const cleanUrl = url.split("?")[0];
+
   const routes = {
     "/": "../HTML/index.html",
     "/index.html": "../HTML/index.html",
@@ -22,24 +22,19 @@ export function getFilePath(url) {
     "/javascript/auth.js": "../javascript/auth.js",
     "/javascript/auth-loader.js": "../javascript/auth-loader.js",
     "/images/logo-modern.svg": "../images/logo-modern.svg",
-    "/images/hero/hero_ai.jpg": "../images/hero/hero_ai.jpg",
-    "/images/Categories/cookware.jpg": "../images/Categories/cookware.jpg",
-    "/images/Categories/utensils.jpg": "../images/Categories/utensils.jpg",
-    "/images/Categories/drinkware.jpg": "../images/Categories/drinkware.jpg",
-    "/images/Categories/appliances.jpg": "../images/Categories/appliances.jpg",
-    "/images/Categories/bathroom.jpg": "../images/Categories/bathroom.jpg",
-    "/images/Categories/living.jpg": "../images/Categories/living.jpg",
-    "/images/Categories/bedroom.jpg": "../images/Categories/bedroom.jpg",
-    "/images/Categories/decor.jpg": "../images/Categories/decor.jpg",
-    "/images/tutor_images/elladaBayramova.jpg": "../images/tutor_images/elladaBayramova.jpg",
-    "/images/tutor_images/ilkinMustafayev.jpg": "../images/tutor_images/ilkinMustafayev.jpg",
-    "/images/tutor_images/raulBayramov.jpg": "../images/tutor_images/raulBayramov.jpg",
+    "/images/hero/student-success.webp": "../images/hero/student-success.webp",
+    "/images/tutor_images/elladaBayramova.jpg":
+      "../images/tutor_images/elladaBayramova.jpg",
+    "/images/tutor_images/ilkinMustafayev.jpg":
+      "../images/tutor_images/ilkinMustafayev.jpg",
+    "/images/tutor_images/raulBayramov.jpg":
+      "../images/tutor_images/raulBayramov.jpg",
   };
 
   const relativePath = routes[cleanUrl];
   if (!relativePath) {
     // For any undefined routes, redirect to index.html (SPA behavior)
-    if (cleanUrl.startsWith('/') && !cleanUrl.includes('.')) {
+    if (cleanUrl.startsWith("/") && !cleanUrl.includes(".")) {
       return path.join(process.cwd(), "../HTML/index.html");
     }
     return null;

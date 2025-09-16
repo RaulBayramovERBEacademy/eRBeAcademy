@@ -1,72 +1,128 @@
-/* ...existing code... */
+/* Modern & Responsive Styles */
 
-/* Inline Search Bar Design */
-/* Add to your CSS file (ör: general_styles.css veya ayrı bir yerde) */
-.countries, .adjacentCountries{
+/* Container for country cards */
+.countries,
+.adjacentCountries {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: left;
-  gap: 20px;
-  align-items: center; /* isteğe bağlı, ortalamak için */
+  gap: 24px;
+  justify-content: center;
+  align-items: stretch;
+  padding: 16px;
 }
 
-/* Add to your CSS file (ör: general_styles.css) */
+/* Country card styling */
 .country-card {
-  flex: 1;
-  background-color: tomato;
-  max-width: 20%;
-  min-height: fit-content;
-  min-width: 100px;
-  border: 1px solid black;
-  border-radius: 10px;
-  padding: 10px;
-  width: 200px;
+  flex: 1 1 220px;
+  background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%);
+  max-width: 300px;
+  min-width: 180px;
+  border: none;
+  border-radius: 16px;
+  padding: 18px 14px;
+  margin: 0;
   text-align: center;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
-/* Add to your CSS file (ör: general_styles.css) */
+.country-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+}
 .country-card img {
   width: 100%;
-  border-radius: 10px 10px 0 0;
+  border-radius: 12px 12px 0 0;
+  object-fit: cover;
+  max-height: 140px;
 }
+
+/* Inline search bar */
 .inline-search-bar {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0;
-  margin: 24px 0;
+  margin: 32px 0;
+  width: 100%;
 }
 
 .inline-search-bar input[type="text"] {
-  border: 1px solid #4f8cff;
-  border-right: none;
-  border-radius: 8px 0 0 8px;
-  padding: 10px 16px;
-  font-size: 1rem;
+  border: none;
+  border-radius: 12px 0 0 12px;
+  padding: 12px 18px;
+  font-size: 1.1rem;
   outline: none;
-  width: 220px;
-  transition: border-color 0.2s;
+  width: 260px;
+  background: #f5f7fa;
+  box-shadow: 0 2px 8px rgba(79, 140, 255, 0.08);
+  transition: box-shadow 0.2s;
 }
-
 .inline-search-bar input[type="text"]:focus {
-  border-color: #22223b;
+  box-shadow: 0 2px 12px rgba(34, 34, 59, 0.15);
 }
 
 .inline-search-bar button {
-  border: 1px solid #4f8cff;
-  border-radius: 0 8px 8px 0;
-  background: #4f8cff;
+  border: none;
+  border-radius: 0 12px 12px 0;
+  background: linear-gradient(90deg, #4f8cff 0%, #22223b 100%);
   color: #fff;
-  font-size: 1rem;
-  padding: 10px 20px;
+  font-size: 1.1rem;
+  padding: 12px 26px;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(79, 140, 255, 0.08);
 }
-
 .inline-search-bar button:hover {
-  background: #22223b;
-  color: #fff;
+  background: linear-gradient(90deg, #22223b 0%, #4f8cff 100%);
+  box-shadow: 0 4px 16px rgba(34, 34, 59, 0.12);
 }
 
-/* ...existing code... */
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .countries,
+  .adjacentCountries {
+    gap: 16px;
+  }
+  .country-card {
+    max-width: 45vw;
+    min-width: 140px;
+    padding: 14px 8px;
+  }
+  .inline-search-bar input[type="text"] {
+    width: 180px;
+    font-size: 1rem;
+  }
+  .inline-search-bar button {
+    padding: 12px 18px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .countries,
+  .adjacentCountries {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 8px;
+  }
+  .country-card {
+    max-width: 98vw;
+    min-width: 90vw;
+    padding: 10px 4px;
+  }
+  .inline-search-bar {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+  .inline-search-bar input[type="text"],
+  .inline-search-bar button {
+    border-radius: 12px;
+    width: 98vw;
+    max-width: 100%;
+    font-size: 1rem;
+  }
+}

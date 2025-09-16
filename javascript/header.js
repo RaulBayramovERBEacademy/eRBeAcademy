@@ -112,44 +112,4 @@ document.addEventListener("DOMContentLoaded", function () {
   // Resize olunca da her seferinde kontrol et
   window.addEventListener("resize", updateHeaderLayout);
   window.addEventListener("resize", updateHero);
-
-  const subcategories = {
-    "teaching-certification": [
-      { value: "math-1-6", text: "Riyaziyyat (1-6)" },
-      { value: "math-1-12", text: "Riyaziyyat (1-12)" },
-      { value: "biology", text: "Biologiya" },
-      { value: "nature", text: "Təbiət" },
-      { value: "informatics", text: "İnformatika" },
-    ],
-    programming: [
-      { value: "html-css", text: "HTML/CSS" },
-      { value: "javascript", text: "JavaScript" },
-      { value: "cpp", text: "C++" },
-      { value: "nodejs", text: "Node.js" },
-    ],
-    // Digər kateqoriyalar üçün əlavə etmək olar
-  };
-
-  document
-    .getElementById("main-category")
-    .addEventListener("change", function () {
-      const selected = this.value;
-      const subSelect = document.getElementById("subcategory");
-      subSelect.innerHTML = "";
-      if (subcategories[selected]) {
-        subSelect.style.display = "inline-block";
-        subcategories[selected].forEach((sub) => {
-          const opt = document.createElement("option");
-          opt.value = sub.value;
-          opt.textContent = sub.text;
-          subSelect.appendChild(opt);
-        });
-        subSelect.insertAdjacentHTML(
-          "afterbegin",
-          `<option value="" disabled selected>Alt Kateqoriya seçin</option>`
-        );
-      } else {
-        subSelect.style.display = "none";
-      }
-    });
 });

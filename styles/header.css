@@ -349,8 +349,8 @@ ul li {
   -webkit-appearance: none;
   -moz-appearance: none;
   transition: all 0.3s ease;
-  min-width: 100px;
-  max-width: 120px;
+  min-width: 130px;
+  max-width: 155px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
