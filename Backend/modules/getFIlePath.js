@@ -17,9 +17,14 @@ export function getFilePath(url) {
     "/styles/footer.css": "../styles/footer.css",
     "/styles/auth.css": "../styles/auth.css",
     "/styles/courses.css": "../styles/courses.css",
-    "/javascript/header.js": "../javascript/header.js",
-    "/javascript/course_Carusel.js": "../javascript/course_Carusel.js",
+    "/javascript/headerFiles/header.js": "../javascript/headerFiles/header.js",
+    "/javascript/headerFiles/MobileHeaderUtilities.js":
+      "../javascript/headerFiles/MobileHeaderUtilities.js",
+    "/javascript/headerFiles/categories.js":
+      "../javascript/headerFiles/categories.js",
+    "/javascript/hero.js": "../javascript/hero.js",
     "/javascript/data/data.js": "../javascript/data/data.js",
+    "/javascript/course_Carusel.js": "../javascript/course_Carusel.js",
     "/javascript/auth.js": "../javascript/auth.js",
     "/javascript/auth-loader.js": "../javascript/auth-loader.js",
     "/images/logo-modern.svg": "../images/logo-modern.svg",
