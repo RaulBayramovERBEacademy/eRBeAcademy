@@ -1,48 +1,57 @@
 import { renderMobileNavbar } from "/javascript/headerFiles/MobileHeaderUtilities.js";
 import { categoriesDropdown } from "/javascript/headerFiles/categories.js";
 document.addEventListener("DOMContentLoaded", function () {
-  const originalHeader = document.querySelector("header").innerHTML;
-  function wait100s() {}
-  function updateHeaderLayout() {
-    let header = document.querySelector("header");
-    if (window.innerWidth <= 768) {
-      if (header.classList.contains("mobile-header")) {
-        return;
-      }
-      header.classList.add("mobile-header");
-      const icons = header.querySelector(".icons");
-
-      const hamburger_menu = header.querySelector("i");
-
-      hamburger_menu.addEventListener("click", function () {
-        const isOpen = hamburger_menu.classList.contains("fa-xmark");
-
-        if (isOpen) {
-          const mobileMenu = document.querySelector(".mobile-menu");
-          if (mobileMenu) {
-            mobileMenu.remove();
+  (async function () {
+    try {
+      const response = await fetch("/header.html");
+      const headerHTML = await response.text();
+      document.querySelector("header").innerHTML = headerHTML;
+      const originalHeader = document.querySelector("header").innerHTML;
+      function wait100s() {}
+      function updateHeaderLayout() {
+        let header = document.querySelector("header");
+        if (window.innerWidth <= 768) {
+          if (header.classList.contains("mobile-header")) {
+            return;
           }
-          hamburger_menu.classList.replace("fa-xmark", "fa-bars");
+          header.classList.add("mobile-header");
+          const icons = header.querySelector(".icons");
+
+          const hamburger_menu = header.querySelector("i");
+
+          hamburger_menu.addEventListener("click", function () {
+            const isOpen = hamburger_menu.classList.contains("fa-xmark");
+
+            if (isOpen) {
+              const mobileMenu = document.querySelector(".mobile-menu");
+              if (mobileMenu) {
+                mobileMenu.remove();
+              }
+              hamburger_menu.classList.replace("fa-xmark", "fa-bars");
+            } else {
+              renderMobileNavbar(header);
+              hamburger_menu.classList.replace("fa-bars", "fa-xmark");
+            }
+          });
+
+          setTimeout(() => {
+            wait100s();
+          }, 100);
         } else {
-          renderMobileNavbar(header);
-          hamburger_menu.classList.replace("fa-bars", "fa-xmark");
+          if (!header.classList.contains("mobile-header")) return;
+          header.innerHTML = originalHeader;
+          header.classList.remove("mobile-header");
+          header.style.height = "";
+          header.style.paddingBottom = "";
+          categoriesDropdown();
         }
-      });
+      }
 
-      setTimeout(() => {
-        wait100s();
-      }, 100);
-    } else {
-      if (!header.classList.contains("mobile-header")) return;
-      header.innerHTML = originalHeader;
-      header.classList.remove("mobile-header");
-      header.style.height = "";
-      header.style.paddingBottom = "";
+      updateHeaderLayout();
       categoriesDropdown();
+      window.addEventListener("resize", updateHeaderLayout);
+    } catch (error) {
+      console.log(error);
     }
-  }
-
-  updateHeaderLayout();
-  categoriesDropdown();
-  window.addEventListener("resize", updateHeaderLayout);
+  })();
 });

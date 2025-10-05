@@ -56,11 +56,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const rightBtn = document.querySelector(".scroll-btn.right");
 
     leftBtn.addEventListener("click", () => {
-      container.scrollLeft -= 300; // 300px sola
+      container.scrollLeft -= 320;
     });
 
     rightBtn.addEventListener("click", () => {
-      container.scrollLeft += 300; // 300px sağa
+      container.scrollLeft += 320;
     });
     // Event listeners
     document.querySelectorAll(".quick-view").forEach((button) => {

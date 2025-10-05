@@ -6,6 +6,7 @@ export function getFilePath(url) {
   const routes = {
     "/": "../HTML/index.html",
     "/index.html": "../HTML/index.html",
+    "/header.html": "../HTML/header.html",
     "/auth": "../HTML/auth.html",
     "/auth.html": "../HTML/auth.html",
     "/styles/variables.css": "../styles/variables.css",
