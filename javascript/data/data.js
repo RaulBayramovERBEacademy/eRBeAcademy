@@ -48,6 +48,7 @@ class Course {
     category,
     subcategory,
     price,
+    coverImg,
   }) {
     if (!CATEGORY_LIST.some((cat) => cat.value === category)) {
       throw new Error(`Invalid category: ${category}`);
@@ -72,6 +73,7 @@ class Course {
     this.category = category; // e.g. "programing"
     this.subcategory = subcategory; // e.g. "javascript"
     this.price = price; // in USD
+    this.coverImg = coverImg;
   }
 }
 
@@ -89,7 +91,8 @@ const courses = [
     level: "Orta",
     category: "programming",
     subcategory: "javascript",
-    price: 5000,
+    price: 49,
+    coverImg: "courses/web",
   }),
   new Course({
     id: 1002,
@@ -104,7 +107,8 @@ const courses = [
     level: "Başlanğıc",
     category: "programming",
     subcategory: "html-css",
-    price: 5000,
+    price: 49,
+    coverImg: "courses/web",
   }),
   new Course({
     id: 1003,
@@ -119,7 +123,8 @@ const courses = [
     level: "Başlanğıc",
     category: "programming",
     subcategory: "ict-literacy",
-    price: 5000,
+    price: 49,
+    coverImg: "courses/inf",
   }),
   new Course({
     id: 1004,
@@ -134,7 +139,8 @@ const courses = [
     level: "Başlanğıc",
     category: "teaching-certification",
     subcategory: "informatics",
-    price: 10000,
+    price: 79,
+    coverImg: "courses/inf",
   }),
   new Course({
     id: 1005,
@@ -149,7 +155,8 @@ const courses = [
     level: "Başlanğıc",
     category: "teaching-certification",
     subcategory: "biology",
-    price: 10000,
+    price: 79,
+    coverImg: "courses/bio",
   }),
   new Course({
     id: 1006,
@@ -164,7 +171,8 @@ const courses = [
     level: "Başlanğıc",
     category: "teaching-certification",
     subcategory: "nature",
-    price: 10000,
+    price: 79,
+    coverImg: "courses/tebiet",
   }),
   new Course({
     id: 1007,
@@ -179,7 +187,8 @@ const courses = [
     level: "Başlanğıc",
     category: "teaching-certification",
     subcategory: "math-7-12",
-    price: 10000,
+    price: 79,
+    coverImg: "courses/inf",
   }),
   new Course({
     id: 1008,
@@ -194,7 +203,8 @@ const courses = [
     level: "Orta",
     category: "teaching-certification",
     subcategory: "math-1-6",
-    price: 10000,
+    price: 79,
+    coverImg: "courses/riyt16",
   }),
   new Course({
     id: 1009,
@@ -209,7 +219,8 @@ const courses = [
     level: "Başlanğıc",
     category: "student-exam",
     subcategory: "math",
-    price: 8000,
+    price: 59,
+    coverImg: "courses/inf",
   }),
   // Lazım olsa yeni kurslar əlavə edə bilərsiniz
 ];

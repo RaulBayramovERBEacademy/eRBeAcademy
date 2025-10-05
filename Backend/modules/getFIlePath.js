@@ -35,6 +35,11 @@ export function getFilePath(url) {
       "../images/tutor_images/ilkinMustafayev.jpg",
     "/images/tutor_images/raulBayramov.jpg":
       "../images/tutor_images/raulBayramov.jpg",
+    "/courses/web.png": "../images/courses/web.png",
+    "/courses/bio.png": "../images/courses/bio.png",
+    "/courses/inf.png": "../images/courses/inf.png",
+    "/courses/tebiet.png": "../images/courses/tebiet.png",
+    "/courses/riyt16.png": "../images/courses/riyt16.png",
   };
 
   const relativePath = routes[cleanUrl];

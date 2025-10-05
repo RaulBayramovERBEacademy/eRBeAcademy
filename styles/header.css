@@ -328,23 +328,11 @@ ul li {
   width: fit-content;
 }
 .fake-select-category-container i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 20px;
   height: 20px;
-}
-.fake-select-category-container i::before {
-  display: none;
-}
-.dropdown_menu::after {
-  content: "\f107";
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-  position: absolute;
-  right: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--black-50);
-  pointer-events: none;
-  font-size: 0.9rem;
 }
 
 .fake-dropdown-menu.open li {
@@ -379,4 +367,9 @@ ul li {
 
   font-weight: 600;
   transition: all 0.2s ease;
+}
+
+nav * {
+  cursor: pointer;
+  font-size: 16px;
 }

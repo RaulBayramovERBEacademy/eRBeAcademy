@@ -3,7 +3,7 @@ import { courses } from "/javascript/data/data.js";
 const formatPrice = (price) => {
   return new Intl.NumberFormat("en-US", {
     style: "currency",
-    currency: "USD",
+    currency: "GEL",
   }).format(price);
 };
 
@@ -12,19 +12,15 @@ const createCourseCard = (course) => {
   return `
     <div class="course-card" data-category="${course.category.toLowerCase()}">
       <div class="course-image">
-        <i class="${course.iconClass}"></i>
+        <img src= "/${course.coverImg}.png" />
       </div>
       <div class="course-info">
         <h3 class="course-title">${course.title}</h3>
         <div class="course-tutor">By ${course.tutorName}</div>
         <div class="course-price">
-          <span class="current-price">${formatPrice(course.price || 0)}</span>
+          <span class="current-price">
+          ${formatPrice(course.price || 0)}</span>
         </div>
-      </div>
-      <div class = "add-to-cart-btn-container">
-        <button class="add-to-cart" data-course-id="${
-          course.id
-        }">Add to Cart</button>
       </div>
     </div>
   `;
