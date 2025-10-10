@@ -1,0 +1,6 @@
+@import url("/styles/variables.css");
+@import url("/styles/general_styles.css");
+@import url("/styles/mainSections/career.css");
+@import url("/styles/mainSections/hero.css");
+@import url("/styles/mainSections/courses.css");
+@import url("/styles/mainSections/tutors.css");
