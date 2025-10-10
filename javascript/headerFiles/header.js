@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
           }
           header.classList.add("mobile-header");
-          const icons = header.querySelector(".icons");
 
           const hamburger_menu = header.querySelector("i");
 

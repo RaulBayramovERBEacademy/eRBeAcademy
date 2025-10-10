@@ -1,3 +1,6 @@
+import { courses } from "/javascript/data/data.js";
+import { renderCourses } from "/javascript/course_Carusel.js";
+
 export function categoriesDropdown() {
   let container = document.querySelector(".dropdown_menu");
   if (container) {
@@ -18,6 +21,18 @@ export function categoriesDropdown() {
         if (e.target.tagName === "LI") {
           const value = e.target.innerHTML;
           document.querySelector(".selected-category-name").innerHTML = value;
+        }
+
+        let filteredCourses = courses.filter((course) => {
+          return course.category === e.target.dataset.category;
+        });
+
+        renderCourses(filteredCourses);
+
+        const section = document.querySelector(".courses");
+        if (section) {
+          const top = section.getBoundingClientRect().top + window.scrollY - 80; // header yüksekliği
+          window.scrollTo({ top, behavior: "smooth" });
         }
       });
     });

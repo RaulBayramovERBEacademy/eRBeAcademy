@@ -24,10 +24,14 @@ export function getFilePath(url) {
     "/javascript/headerFiles/categories.js":
       "../javascript/headerFiles/categories.js",
     "/javascript/hero.js": "../javascript/hero.js",
+    "/javascript/index.js": "../javascript/index.js",
     "/javascript/data/data.js": "../javascript/data/data.js",
     "/javascript/course_Carusel.js": "../javascript/course_Carusel.js",
     "/javascript/auth.js": "../javascript/auth.js",
     "/javascript/auth-loader.js": "../javascript/auth-loader.js",
+    "/javascript/data/data.js": "../javascript/data/data.js",
+    "/favicon.ico": "../favicon.ico",
+    "/images/logo.svg": "../images/logo.svg",
     "/images/logo-modern.svg": "../images/logo-modern.svg",
     "/images/hero/student-success.webp": "../images/hero/student-success.webp",
     "/images/tutor_images/elladaBayramova.jpg":

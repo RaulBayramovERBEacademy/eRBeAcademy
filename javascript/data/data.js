@@ -10,8 +10,8 @@ const CATEGORY_LIST = [
 
 const SUBCATEGORY_LIST = {
   programming: [
-    { value: "html-css", label: "HTML/CSS" },
     { value: "javascript", label: "JavaScript" },
+    { value: "web-development", label: "Veb Programlaşdırma" },
     { value: "cpp", label: "C++" },
     { value: "nodejs", label: "Node.js" },
     { value: "ict-literacy", label: "ICT Literacy" },
@@ -22,6 +22,8 @@ const SUBCATEGORY_LIST = {
     { value: "biology", label: "Biologiya" },
     { value: "nature", label: "Təbiət" },
     { value: "informatics", label: "İnformatika" },
+    { value: "primary-education-teaching", label: "İbtidai sinif müəllimliyi" },
+    { value: "english", label: "ingilis-dili" },
   ],
   "student-exam": [
     { value: "math", label: "Riyaziyyat" },
@@ -97,7 +99,7 @@ const courses = [
   new Course({
     id: 1002,
     iconClass: "fa-brands fa-html5",
-    title: "HTML/CSS",
+    title: "Veb programlaşdırma",
     tutorName: "Raul Bayramov",
     tutorPhoto: "/images/tutor_images/raulBayramov.jpg",
     description:
@@ -106,7 +108,7 @@ const courses = [
     duration: "6 həftə",
     level: "Başlanğıc",
     category: "programming",
-    subcategory: "html-css",
+    subcategory: "web-development",
     price: 49,
     coverImg: "courses/web",
   }),
@@ -222,7 +224,22 @@ const courses = [
     price: 59,
     coverImg: "courses/inf",
   }),
-  // Lazım olsa yeni kurslar əlavə edə bilərsiniz
+  new Course({
+    id: 1010,
+    iconClass: "fa-solid fa-dna",
+    title: "Milli İmtahana Hazırlıq - Bialogiya",
+    tutorName: "Ellada Bayramova",
+    tutorPhoto: "/images/tutor_images/elladaBayramova.jpg",
+    description:
+      "Canlıların quruluşu, funksiyaları və ekosistemlərlə əlaqələrini dərindən öyrən.",
+    startDate: "2025-10-01",
+    duration: "26 həftə",
+    level: "Başlanğıc",
+    category: "student-exam",
+    subcategory: "biology",
+    price: 79,
+    coverImg: "courses/bio",
+  }),
 ];
 
 export { Course, courses };

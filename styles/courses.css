@@ -14,6 +14,7 @@
   scroll-behavior: smooth;
   padding: 10px 0;
   height: fit-content;
+  box-sizing: border-box;
 }
 
 .course-container::-webkit-scrollbar {
@@ -121,5 +122,13 @@
   .course-wrapper {
     margin: 1rem;
     width: calc(100% - 2rem);
+    padding: 20px 20px;
+  }
+  .scroll-btn.left {
+    left: 0px;
+  }
+
+  .scroll-btn.right {
+    right: 0px;
   }
 }
