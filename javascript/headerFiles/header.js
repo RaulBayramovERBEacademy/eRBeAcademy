@@ -7,6 +7,12 @@ document.addEventListener("DOMContentLoaded", function () {
       const headerHTML = await response.text();
       document.querySelector("header").innerHTML = headerHTML;
       const originalHeader = document.querySelector("header").innerHTML;
+      document
+        .querySelector(".logo")
+        .addEventListener(
+          "click",
+          () => (window.location.href = "/index.html")
+        );
       function wait100s() {}
       function updateHeaderLayout() {
         let header = document.querySelector("header");

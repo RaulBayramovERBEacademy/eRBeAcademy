@@ -61,6 +61,13 @@ export function renderCourses(coursesList) {
     rightBtn.addEventListener("click", () => {
       container.scrollLeft += 320;
     });
+
+    container.addEventListener("click", (e) => {
+      const card = e.target.closest(".course-card");
+      if (card) {
+        window.location.href = "/course.html";
+      }
+    });
   } catch (error) {
     console.error("Error initializing courses:", error);
   }

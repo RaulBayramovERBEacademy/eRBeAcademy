@@ -7,6 +7,7 @@ export function getFilePath(url) {
     "/": "../HTML/index.html",
     "/index.html": "../HTML/index.html",
     "/header.html": "../HTML/header.html",
+    "/course.html": "../HTML/course.html",
     "/auth": "../HTML/auth.html",
     "/auth.html": "../HTML/auth.html",
     "/styles/variables.css": "../styles/variables.css",
@@ -21,6 +22,7 @@ export function getFilePath(url) {
     "/styles/mainSections/courses.css": "../styles/mainSections/courses.css",
     "/styles/main.css": "../styles/main.css",
     "/styles/footer.css": "../styles/footer.css",
+    "/styles/course-page.css": "../styles/course-page.css",
     "/styles/auth.css": "../styles/auth.css",
     "/javascript/headerFiles/header.js": "../javascript/headerFiles/header.js",
     "/javascript/headerFiles/MobileHeaderUtilities.js":
@@ -32,9 +34,9 @@ export function getFilePath(url) {
       "../javascript/mainSections/course_Carusel.js",
     "/javascript/index.js": "../javascript/index.js",
     "/javascript/data/data.js": "../javascript/data/data.js",
-
     "/javascript/auth.js": "../javascript/auth.js",
     "/javascript/auth-loader.js": "../javascript/auth-loader.js",
+    "/javascript/course-page.js": "../javascript/course-page.js",
     "/favicon.ico": "../favicon.ico",
     "/images/logo.svg": "../images/logo.svg",
     "/images/logo-modern.svg": "../images/logo-modern.svg",
