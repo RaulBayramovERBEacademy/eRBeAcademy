@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .querySelector(".logo")
         .addEventListener(
           "click",
-          () => (window.location.href = "/index.html")
+          () => (window.location.href = ".././index.html")
         );
       document
         .querySelector(".about-us")

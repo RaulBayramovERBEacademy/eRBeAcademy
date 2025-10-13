@@ -7,6 +7,7 @@ async function renderFooter() {
     return;
   }
   footer.innerHTML = footerHTML;
+  requestAnimationFrame(() => footer.classList.add("visible"));
 }
 document.addEventListener("DOMContentLoaded", async function () {
   await renderFooter();
