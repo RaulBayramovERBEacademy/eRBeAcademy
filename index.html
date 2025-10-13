@@ -92,6 +92,28 @@
         </div>
       </section>
       <section class="courses">
+        <div class="courses-head">
+          <div class="courses-head-title">
+            <h2>Kursları Kəşf edin</h2>
+            <p>Kateqoriyaya görə filtrləyin və sizə uyğun olanı seçin</p>
+          </div>
+          <div class="courses-filters">
+            <div class="filter fake-select" id="category-select">
+              <button class="fake-select-toggle" type="button">
+                <span class="selected-label">Bütün kateqoriyalar</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+              <ul class="fake-select-menu" id="category-menu"></ul>
+            </div>
+            <div class="filter fake-select" id="subcategory-select" hidden>
+              <button class="fake-select-toggle" type="button">
+                <span class="selected-label">Alt kateqoriya</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </button>
+              <ul class="fake-select-menu" id="subcategory-menu"></ul>
+            </div>
+          </div>
+        </div>
         <div class="course-wrapper"></div>
       </section>
       <!-- Instructors Section START -->
@@ -138,12 +160,12 @@
           </div>
         </div>
       </section>
-      <!-- Instructors Section END -->
     </main>
     <footer class="footer"></footer>
     <script src="/javascript/headerFiles/header.js" type="module"></script>
-    <script src="/javascript/auth-loader.js"></script>
+    <script src="/javascript/auth-files/auth-loader.js"></script>
     <script src="/javascript/mainSections/hero.js"></script>
+    <script src="/javascript/mainSections/courses_filter.js" type="module"></script>
     <script src="/javascript/footer.js"></script>
   </body>
 </html>

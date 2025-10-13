@@ -242,4 +242,4 @@ const courses = [
   }),
 ];
 
-export { Course, courses };
+export { Course, courses, CATEGORY_LIST, SUBCATEGORY_LIST };
