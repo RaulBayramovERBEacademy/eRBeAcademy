@@ -13,6 +13,12 @@ document.addEventListener("DOMContentLoaded", function () {
           "click",
           () => (window.location.href = "/index.html")
         );
+      document
+        .querySelector(".about-us")
+        .addEventListener(
+          "click",
+          () => (window.location.href = "./HTML/about.html")
+        );
       function wait100s() {}
       function updateHeaderLayout() {
         let header = document.querySelector("header");

@@ -65,7 +65,7 @@ export function renderCourses(coursesList) {
     container.addEventListener("click", (e) => {
       const card = e.target.closest(".course-card");
       if (card) {
-        window.location.href = "/course.html";
+        window.location.href = "/HTML/course.html";
       }
     });
   } catch (error) {
