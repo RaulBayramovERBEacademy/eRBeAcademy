@@ -5,7 +5,7 @@ export function getFilePath(url) {
 
   const routes = {
     "/": "../HTML/index.html",
-    "/index.html": "../HTML/index.html",
+    "/index.html": "../index.html",
     "/header.html": "../HTML/header.html",
     "/course.html": "../HTML/course.html",
     "/auth": "../HTML/auth.html",

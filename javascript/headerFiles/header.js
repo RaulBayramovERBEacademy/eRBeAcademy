@@ -51,7 +51,6 @@ document.addEventListener("DOMContentLoaded", function () {
           categoriesDropdown();
         }
       }
-
       updateHeaderLayout();
       categoriesDropdown();
       window.addEventListener("resize", updateHeaderLayout);
