@@ -167,7 +167,7 @@
 
 @media (max-width: 768px) {
   .courses-head { flex-direction: column; align-items: stretch; padding: 20px 10px 0 10px }
-  .courses-filters { justify-content: space-between; }
+  .courses-filters { justify-content: space-between; padding-bottom: 10px;}
   .course-wrapper {
     margin: 1rem;
     width: calc(100% - 2rem);

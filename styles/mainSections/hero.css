@@ -11,6 +11,14 @@
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   overflow: hidden;
+  min-height: 500px;
+}
+
+.hero-slide {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .hero .hero_text {
@@ -21,31 +29,40 @@
   align-items: flex-start;
   padding: 3rem;
   text-align: left;
+  z-index: 2;
 }
+
 .hero .hero_text .eyebrow {
   display: inline-block;
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--secondary-color);
-  background: rgba(16, 185, 129, 0.08);
-  padding: 0.25rem 0.5rem;
-  border-radius: 999px;
-  margin-bottom: 0.75rem;
+  background: rgba(34, 197, 94, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
+
 .hero .hero_image {
   flex: 1;
   height: 100%;
   overflow: hidden;
+  position: relative;
 }
+
 .hero img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
 }
+
 .hero:hover img {
   transform: scale(1.05);
 }
+
 .hero i {
   font-size: 2.5rem;
   color: var(--primary-color);
@@ -60,37 +77,48 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: all 0.3s ease;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
 }
+
 .hero i:hover {
   color: var(--hower-effect);
-  transform: scale(1.1);
+  transform: translateY(-50%) scale(1.1);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
+
 .hero #chevron-left {
   left: 1rem;
 }
+
 .hero #chevron-right {
   right: 1rem;
 }
+
 .hero h1 {
   margin-bottom: 1.5rem;
   color: var(--primary-color);
-  font-size: 2.5rem;
+  font-size: var(--h1);
   line-height: 1.2;
+  font-weight: 600;
 }
+
 .hero .hero_text p {
   margin: 0;
   margin-bottom: 2.5rem;
   color: var(--black-75);
-  font-size: 1.1rem;
+  font-size: var(--body);
   line-height: 1.6;
   max-width: 90%;
 }
+
 .hero .cta-group {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
+
 .hero .btn-secondary {
   height: 3rem;
   display: inline-flex;
@@ -104,10 +132,12 @@
   text-decoration: none;
   transition: all 0.3s ease;
 }
+
 .hero .btn-secondary:hover {
   background: var(--black-5);
   transform: translateY(-2px);
 }
+
 .hero button {
   height: 3.5rem;
   width: auto;
@@ -124,46 +154,119 @@
   font-size: 1.1rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.15);
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.15);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
+
 .hero button:hover {
   transform: translateY(-3px);
   background: var(--primary-color);
   color: white;
-  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.25);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.25);
 }
+
+/* Hero Carousel Indicators */
+.hero-indicators {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+.hero-indicators .indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+.hero-indicators .indicator.active {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  transform: scale(1.2);
+}
+
+.hero-indicators .indicator:hover {
+  background: rgba(255, 255, 255, 0.8);
+  transform: scale(1.1);
+}
+
+.hero-indicators .indicator.active:hover {
+  background: var(--hower-effect);
+  border-color: var(--hower-effect);
+}
+
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
     margin: 1rem;
     width: calc(100% - 2rem);
+    min-height: 400px;
   }
+  
+  .hero-slide {
+    flex-direction: column;
+  }
+  
   .hero .hero_text {
     padding: 2rem;
     align-items: center;
     text-align: center;
+    order: 2;
   }
+  
+  .hero .hero_image {
+    order: 1;
+    height: 200px;
+  }
+  
   .hero .hero_text p {
     margin-bottom: 1.5rem;
+    max-width: 100%;
   }
+  
   .hero .cta-group {
     width: 100%;
     justify-content: center;
   }
-  .hero .hero_text p {
-    max-width: 100%;
-  }
+  
   .hero h1 {
-    font-size: 2rem;
+    font-size: var(--h2);
   }
+  
   .hero i {
     font-size: 2rem;
     width: 40px;
     height: 40px;
+    top: auto;
+    transform: none;
   }
+  
+  .hero #chevron-left {
+    left: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .hero #chevron-right {
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
   .hero button {
     min-width: 10rem;
+    font-size: 1rem;
+  }
+  
+  .hero-indicators {
+    bottom: 0.5rem;
   }
 }
