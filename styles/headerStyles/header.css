@@ -1,7 +1,7 @@
-@import url("/styles/mobileHeader.css");
-@import url("/styles/categoryDropdown.css");
-@import url("/styles/variables.css");
-@import url("/styles/general_styles.css");
+@import url("/styles/headerStyles/mobileHeader.css");
+@import url("../headerStyles/categoryDropdown.css");
+@import url("../variables.css");
+@import url("../general_styles.css");
 header {
   background-color: white;
   padding: 5px 20px;

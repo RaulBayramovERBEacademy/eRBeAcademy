@@ -1,5 +1,5 @@
 import { courses } from "/javascript/data/data.js";
-import { renderCourses } from "/javascript/course_Carusel.js";
+import { renderCourses } from "../mainSections/course_Carusel.js";
 
 export function categoriesDropdown() {
   let container = document.querySelector(".dropdown_menu");

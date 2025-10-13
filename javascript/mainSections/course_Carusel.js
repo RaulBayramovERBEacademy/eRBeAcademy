@@ -12,7 +12,7 @@ export function renderCourses(coursesList) {
     return `
     <div class="course-card" data-category="${course.category.toLowerCase()}">
       <div class="course-image">
-        <img src= "/${course.coverImg}.png" />
+        <img src= "../../images/${course.coverImg}.png" />
       </div>
       <div class="course-info">
         <h3 class="course-title">${course.title}</h3>

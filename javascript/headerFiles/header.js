@@ -1,9 +1,9 @@
-import { renderMobileNavbar } from "/javascript/headerFiles/MobileHeaderUtilities.js";
-import { categoriesDropdown } from "/javascript/headerFiles/categories.js";
+import { renderMobileNavbar } from "../headerFiles/MobileHeaderUtilities.js";
+import { categoriesDropdown } from "../headerFiles/categories.js";
 document.addEventListener("DOMContentLoaded", function () {
   (async function () {
     try {
-      const response = await fetch("/header.html");
+      const response = await fetch("/HTML/header.html");
       const headerHTML = await response.text();
       document.querySelector("header").innerHTML = headerHTML;
       const originalHeader = document.querySelector("header").innerHTML;
