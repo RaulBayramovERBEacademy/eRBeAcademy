@@ -10,7 +10,9 @@ export function renderCourses(coursesList) {
   console.log("Rendering courses:", coursesList);
   const createCourseCard = (course) => {
     return `
-    <div class="course-card" data-category="${course.category.toLowerCase()}">
+    <div class="course-card" data-category="${course.category.toLowerCase()}" data-id="${
+      course.id
+    }">
       <div class="course-image">
         <img src= "../../images/${course.coverImg}.png" />
       </div>
@@ -29,9 +31,6 @@ export function renderCourses(coursesList) {
   try {
     const coursesContainer = document.querySelector(".course-wrapper");
     if (!coursesContainer) {
-      console.error(
-        "courses container not found. Please add a div with class 'courses-container' to your HTML."
-      );
       return;
     }
 
@@ -64,8 +63,9 @@ export function renderCourses(coursesList) {
 
     container.addEventListener("click", (e) => {
       const card = e.target.closest(".course-card");
+      const id = card ? card.getAttribute("data-id") : null;
       if (card) {
-        window.location.href = "/HTML/course.html";
+        window.location.href = `/HTML/course.html?id=${id}`;
       }
     });
   } catch (error) {

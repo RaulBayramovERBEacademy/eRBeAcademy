@@ -88,7 +88,7 @@ const courses = [
     tutorPhoto: "/images/tutor_images/raulBayramov.jpg",
     description:
       "Dinamik veb saytlar yaratmağı öyrən, real layihələrlə JavaScript biliklərini möhkəmləndir.",
-    startDate: "2025-09-20",
+    startDate: "2025-11-01",
     duration: "12 həftə",
     level: "Orta",
     category: "programming",
