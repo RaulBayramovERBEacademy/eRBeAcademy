@@ -90,6 +90,7 @@ function renderCourseHeroSection() {
     heroSection.innerHTML = courseHeroSectionHTML;
   }
 }
+
 function addSmoothScrolling() {
   const links = document.querySelectorAll('a[href^="#"]');
 

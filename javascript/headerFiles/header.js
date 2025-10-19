@@ -8,17 +8,19 @@ document.addEventListener("DOMContentLoaded", function () {
       document.querySelector("header").innerHTML = headerHTML;
       const originalHeader = document.querySelector("header").innerHTML;
       document.querySelector("header").addEventListener("click", (e) => {
-          if(e.target.classList.contains("about-us")){
-            window.location.href = "../HTML/about.html";
-          }
-          if(e.target.classList.contains("contact")){
-            window.location.href = "../HTML/contact.html";
-          }
-          if(e.target.classList.contains("logo")){
-            window.location.href = "../index.html";
-          }
+        if (e.target.classList.contains("about-us")) {
+          window.location.href = "../HTML/about.html";
+        }
+        if (e.target.classList.contains("contact")) {
+          window.location.href = "../HTML/contact.html";
+        }
       });
-      
+      document.querySelector(".logo").addEventListener("click", () => {
+        window.location.href = "../index.html";
+      });
+      document.querySelector("#user_icon").addEventListener("click", () => {
+        window.location.href = "../HTML/auth.html";
+      });
       function wait100s() {}
       function updateHeaderLayout() {
         let header = document.querySelector("header");
