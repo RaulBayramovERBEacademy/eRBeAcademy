@@ -66,10 +66,12 @@ function renderCourseHeroSection() {
 
                 <div class="course-price">
                   <span class="current-price">&#8382;${
-                    course.price * 0.75
+                    course.price - (course.price * (course.discount || 0)) / 100
                   }</span>
                   <span class="original-price">&#8382;${course.price}</span>
-                  <span class="discount">25% endirim</span>
+                  <span class="discount">${String(
+                    course.discount
+                  )}% endirim</span>
                 </div>
               </div>
 

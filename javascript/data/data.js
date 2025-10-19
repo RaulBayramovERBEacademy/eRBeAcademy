@@ -51,6 +51,7 @@ class Course {
     subcategory,
     price,
     coverImg,
+    discount,
   }) {
     if (!CATEGORY_LIST.some((cat) => cat.value === category)) {
       throw new Error(`Invalid category: ${category}`);
@@ -76,6 +77,7 @@ class Course {
     this.subcategory = subcategory; // e.g. "javascript"
     this.price = price; // in USD
     this.coverImg = coverImg;
+    this.discount = discount || 0; // percentage discount
   }
 }
 
@@ -95,6 +97,7 @@ const courses = [
     subcategory: "javascript",
     price: 49,
     coverImg: "courses/web",
+    discount: 25,
   }),
   new Course({
     id: 1002,
@@ -111,6 +114,7 @@ const courses = [
     subcategory: "web-development",
     price: 49,
     coverImg: "courses/web",
+    discount: 25,
   }),
   new Course({
     id: 1003,
@@ -127,6 +131,7 @@ const courses = [
     subcategory: "ict-literacy",
     price: 49,
     coverImg: "courses/inf",
+    discount: 25,
   }),
   new Course({
     id: 1004,
@@ -143,6 +148,7 @@ const courses = [
     subcategory: "informatics",
     price: 79,
     coverImg: "courses/inf",
+    discount: 25,
   }),
   new Course({
     id: 1005,
@@ -159,6 +165,7 @@ const courses = [
     subcategory: "biology",
     price: 79,
     coverImg: "courses/bio",
+    discount: 25,
   }),
   new Course({
     id: 1006,
@@ -175,6 +182,7 @@ const courses = [
     subcategory: "nature",
     price: 79,
     coverImg: "courses/tebiet",
+    discount: 25,
   }),
   new Course({
     id: 1007,
@@ -191,6 +199,7 @@ const courses = [
     subcategory: "math-7-12",
     price: 79,
     coverImg: "courses/inf",
+    discount: 25,
   }),
   new Course({
     id: 1008,
@@ -207,6 +216,7 @@ const courses = [
     subcategory: "math-1-6",
     price: 79,
     coverImg: "courses/riyt16",
+    discount: 25,
   }),
   new Course({
     id: 1009,
@@ -223,6 +233,7 @@ const courses = [
     subcategory: "math",
     price: 59,
     coverImg: "courses/inf",
+    discount: 25,
   }),
   new Course({
     id: 1010,
@@ -239,6 +250,7 @@ const courses = [
     subcategory: "biology",
     price: 79,
     coverImg: "courses/bio",
+    discount: 25,
   }),
 ];
 
