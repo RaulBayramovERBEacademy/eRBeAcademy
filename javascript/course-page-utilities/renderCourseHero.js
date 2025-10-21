@@ -1,0 +1,73 @@
+import { courses } from "../data/data.js";
+export function renderCourseHeroSection() {
+  const heroSection = document.querySelector(".course-hero");
+  if (heroSection) {
+    const id = new URLSearchParams(window.location.search).get("id");
+    const course = courses.find((c) => c.id === parseInt(id));
+    let courseHeroSectionHTML = `
+        <div class="course-hero-container">
+          <div class="course-hero-content">
+            <div class="breadcrumb">
+              <a href="../index.html">Ana Səhifə</a>
+              <i class="fa-solid fa-chevron-right"></i>
+              <a href="#">Kurslar</a>
+              <i class="fa-solid fa-chevron-right"></i>
+              <span>${course.subcategory}</span>
+            </div>
+
+            <div class="course-hero-main">
+              <div class="course-hero-info">
+                <div class="course-category">
+                  <i class="fa-solid fa-code"></i>
+                  <span>${course.category}</span>
+                </div>
+                <h1>${course.subcategory}</h1>
+                <p class="course-description">
+                  ${course.description}
+                </p>
+
+                <div class="course-meta">
+                  <div class="meta-item">
+                    <i class="fa-solid fa-clock"></i>
+                    <span>${course.duration}</span>
+                  </div>
+                  <!-- <div class="meta-item">
+                    <i class="fa-solid fa-users"></i>
+                    <span>24 tələbə</span>
+                  </div>
+                  <div class="meta-item">
+                    <i class="fa-solid fa-star"></i>
+                    <span>4.9 (156 rəy)</span>
+                  </div> -->
+                  <div class="meta-item">
+                    <i class="fa-solid fa-language"></i>
+                    <span>Azərbaycan dili</span>
+                  </div>
+                </div>
+
+                <div class="course-price">
+                  <span class="current-price">&#8382;${
+                    course.price - (course.price * (course.discount || 0)) / 100
+                  }</span>
+                  <span class="original-price">&#8382;${course.price}</span>
+                  <span class="discount">${String(
+                    course.discount
+                  )}% endirim</span>
+                </div>
+              </div>
+
+              <div class="course-hero-image">
+                <img src="../../images/${
+                  course.coverImg
+                }.png" alt="JavaScript Kursu" />
+                <div class="course-badge">
+                  <i class="fa-solid fa-fire"></i>
+                  <span>Populyar</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>`;
+    heroSection.innerHTML = courseHeroSectionHTML;
+  }
+}

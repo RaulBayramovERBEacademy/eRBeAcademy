@@ -12,6 +12,7 @@ const SUBCATEGORY_LIST = {
   programming: [
     { value: "javascript", label: "JavaScript" },
     { value: "web-development", label: "Veb Programlaşdırma" },
+    { value: "HTML/CSS", label: "HTML/CSS" },
     { value: "cpp", label: "C++" },
     { value: "nodejs", label: "Node.js" },
     { value: "ict-literacy", label: "ICT Literacy" },
@@ -39,7 +40,6 @@ const SUBCATEGORY_LIST = {
 class Course {
   constructor({
     id,
-    iconClass,
     title,
     tutorName,
     tutorPhoto,
@@ -52,6 +52,7 @@ class Course {
     price,
     coverImg,
     discount,
+    schedules,
   }) {
     if (!CATEGORY_LIST.some((cat) => cat.value === category)) {
       throw new Error(`Invalid category: ${category}`);
@@ -65,7 +66,6 @@ class Course {
       );
     }
     this.id = id; // unique identifier
-    this.iconClass = iconClass; // FontAwesome icon class
     this.title = title;
     this.tutorName = tutorName;
     this.tutorPhoto = tutorPhoto; // image path
@@ -78,13 +78,13 @@ class Course {
     this.price = price; // in USD
     this.coverImg = coverImg;
     this.discount = discount || 0; // percentage discount
+    this.schedules = schedules || [];
   }
 }
 
 const courses = [
   new Course({
     id: 1001,
-    iconClass: "fa-brands fa-js-square",
     title: "Javascript",
     tutorName: "Raul Bayramov",
     tutorPhoto: "/images/tutor_images/raulBayramov.jpg",
@@ -98,10 +98,112 @@ const courses = [
     price: 49,
     coverImg: "courses/web",
     discount: 25,
+    // 🆕 Həftəlik dərs planı
+    schedule: [
+      {
+        week: 1,
+        title: "JavaScript-ə giriş və mühitin qurulması",
+        topics: [
+          "Proqramlaşdırma anlayışı",
+          "VS Code və Chrome DevTools istifadəsi",
+          "Console.log və dəyişən anlayışı",
+        ],
+      },
+      {
+        week: 2,
+        title: "Dəyişənlər, Data tipləri və Operatorlar",
+        topics: [
+          "var, let, const fərqləri",
+          "String, Number, Boolean, Null, Undefined",
+          "Əməliyyatlar və tip çevirmələri",
+        ],
+      },
+      {
+        week: 3,
+        title: "Şərtlər və Dövrlər",
+        topics: ["if-else", "switch-case", "for və while dövrləri"],
+      },
+      {
+        week: 4,
+        title: "Funksiyalar və Scope",
+        topics: [
+          "Function declaration vs expression",
+          "Arrow funksiyalar",
+          "Scope və closure anlayışı",
+        ],
+      },
+      {
+        week: 5,
+        title: "Array və Object-lərlə işləmək",
+        topics: [
+          "Array metodları (map, filter, reduce)",
+          "Object destructuring",
+          "Spread və Rest operatorları",
+        ],
+      },
+      {
+        week: 6,
+        title: "DOM Manipulyasiyası",
+        topics: [
+          "Element seçimi və dəyişikliklər",
+          "Event listener-lər",
+          "Mini interaktiv layihə",
+        ],
+      },
+      {
+        week: 7,
+        title: "Asinxron JavaScript (callback, promise, async/await)",
+        topics: [
+          "Event loop və task queue",
+          "API-lərdən məlumat çəkmək (fetch)",
+          "JSON məlumatları ilə işləmək",
+        ],
+      },
+      {
+        week: 8,
+        title: "Mini layihə: API ilə işləyən tətbiq",
+        topics: ["Layihə planlaması", "API inteqrasiyası", "UI təkmilləşdirmə"],
+      },
+      {
+        week: 9,
+        title: "Error Handling və Debugging",
+        topics: [
+          "try-catch istifadəsi",
+          "Console debugging üsulları",
+          "Common JS səhvləri",
+        ],
+      },
+      {
+        week: 10,
+        title: "Modullar və Kodun strukturu",
+        topics: [
+          "Modul sistemi (import/export)",
+          "Kodun parçalara bölünməsi",
+          "Reusable funksiyalar",
+        ],
+      },
+      {
+        week: 11,
+        title: "Local Storage və Session Storage",
+        topics: [
+          "Məlumat saxlama üsulları",
+          "Login vəziyyətinin saxlanması",
+          "Mini storage layihəsi",
+        ],
+      },
+      {
+        week: 12,
+        title: "Final Layihə və Təkrar",
+        topics: [
+          "Bütün öyrənilənlərin tətbiqi",
+          "Kod keyfiyyətinin qiymətləndirilməsi",
+          "Layihə təqdimatı",
+        ],
+      },
+    ],
   }),
   new Course({
     id: 1002,
-    iconClass: "fa-brands fa-html5",
     title: "Veb programlaşdırma",
     tutorName: "Raul Bayramov",
     tutorPhoto: "/images/tutor_images/raulBayramov.jpg",
@@ -117,8 +219,115 @@ const courses = [
     discount: 25,
   }),
   new Course({
+    id: 1002,
+    title: "HTML/CSS",
+    tutorName: "Raul Bayramov",
+    tutorPhoto: "/images/tutor_images/raulBayramov.jpg",
+    description:
+      "Göz oxşayan və müasir dizaynlı saytları sıfırdan qurmağı öyrən.",
+    startDate: "2025-09-25",
+    duration: "10 həftə",
+    level: "Başlanğıc",
+    category: "programming",
+    subcategory: "HTML/CSS",
+    price: 49,
+    coverImg: "courses/web",
+    discount: 25,
+    schedule: [
+      {
+        week: 1,
+        title: "HTML əsaslarına giriş",
+        topics: [
+          "Veb səhifə nədir?",
+          "HTML sənədinin quruluşu (doctype, head, body)",
+          "Əsas teqlər: h1–h6, p, a, img, br, hr",
+        ],
+      },
+      {
+        week: 2,
+        title: "Mətn formatlaşdırma və linklər",
+        topics: [
+          "b, strong, i, em, small, mark teqləri",
+          "Anchor (a) ilə daxili və xarici linklər",
+          "target və rel atributları",
+        ],
+      },
+      {
+        week: 3,
+        title: "Listlər və Cədvəllər",
+        topics: [
+          "ul, ol, li – siyahıların yaradılması",
+          "Nested listlər",
+          "table, tr, th, td teqləri və colspan/rowspan",
+        ],
+      },
+      {
+        week: 4,
+        title: "Formlar və input elementləri",
+        topics: [
+          "form, input, textarea, select, button",
+          "name, id, value və placeholder atributları",
+          "label ilə form elementlərini əlaqələndirmək",
+        ],
+      },
+      {
+        week: 5,
+        title: "CSS-ə giriş və seçicilər",
+        topics: [
+          "CSS nədir və necə əlavə olunur (inline, internal, external)",
+          "Basic selector-lar: element, class, id",
+          "Rənglər, fontlar və ölçülər (px, %, em, rem)",
+        ],
+      },
+      {
+        week: 6,
+        title: "Box modeli və layout əsasları",
+        topics: [
+          "Margin, padding, border, content",
+          "display: block, inline, inline-block",
+          "width və height ilə ölçüləndirmə",
+        ],
+      },
+      {
+        week: 7,
+        title: "Position və z-index",
+        topics: [
+          "Static, relative, absolute, fixed, sticky mövqeləri",
+          "Elementləri yerləşdirmə üsulları",
+          "z-index ilə qat nizamlanması",
+        ],
+      },
+      {
+        week: 8,
+        title: "Flexbox ilə layout dizaynı",
+        topics: [
+          "display: flex əsas anlayışları",
+          "justify-content, align-items, flex-wrap",
+          "Praktika: header–main–footer layout qurmaq",
+        ],
+      },
+      {
+        week: 9,
+        title: "Grid sistemi və cavablı dizayn (responsive design)",
+        topics: [
+          "display: grid və grid-template-columns",
+          "Media queries ilə mobil uyğun dizayn",
+          "Grid + Flex kombinasiyası",
+        ],
+      },
+      {
+        week: 10,
+        title: "Mini layihə və təkrar",
+        topics: [
+          "Tam veb səhifə dizaynı (portfolio və ya kurs səhifəsi)",
+          "Layihənin strukturlaşdırılması",
+          "Kod keyfiyyətinə diqqət və son təkrar",
+        ],
+      },
+    ],
+  }),
+  new Course({
     id: 1003,
-    iconClass: "fa-solid fa-laptop-code",
     title: "ICT Literacy",
     tutorName: "Raul Bayramov",
     tutorPhoto: "/images/tutor_images/raulBayramov.jpg",
@@ -135,7 +344,6 @@ const courses = [
   }),
   new Course({
     id: 1004,
-    iconClass: "fa-solid fa-laptop-code",
     title: "Informatika",
     tutorName: "Raul Bayramov",
     tutorPhoto: "/images/tutor_images/raulBayramov.jpg",
@@ -152,7 +360,6 @@ const courses = [
   }),
   new Course({
     id: 1005,
-    iconClass: "fa-solid fa-dna",
     title: "Bialogiya",
     tutorName: "Ellada Bayramova",
     tutorPhoto: "/images/tutor_images/elladaBayramova.jpg",
@@ -169,7 +376,6 @@ const courses = [
   }),
   new Course({
     id: 1006,
-    iconClass: "fa-solid fa-tree-city",
     title: "Təbiət",
     tutorName: "Ellada Bayramova",
     tutorPhoto: "/images/tutor_images/elladaBayramova.jpg",
@@ -186,7 +392,6 @@ const courses = [
   }),
   new Course({
     id: 1007,
-    iconClass: "fa-solid fa-square-root-variable",
     title: "Riyaziyyat (7-12)",
     tutorName: "Ilkin Mustafayev",
     tutorPhoto: "/images/tutor_images/ilkinMustafayev.jpg",
@@ -203,7 +408,6 @@ const courses = [
   }),
   new Course({
     id: 1008,
-    iconClass: "fa-solid fa-laptop-code",
     title: "Riyaziyyat (1-6)",
     tutorName: "Raul Bayramov",
     tutorPhoto: "/images/tutor_images/raulBayramov.jpg",
@@ -220,7 +424,6 @@ const courses = [
   }),
   new Course({
     id: 1009,
-    iconClass: "fa-solid fa-square-root-variable",
     title: "Milli İmtahana Hazırlıq - Riyaziyyat",
     tutorName: "Ilkin Mustafayev",
     tutorPhoto: "/images/tutor_images/ilkinMustafayev.jpg",
@@ -237,7 +440,6 @@ const courses = [
   }),
   new Course({
     id: 1010,
-    iconClass: "fa-solid fa-dna",
     title: "Milli İmtahana Hazırlıq - Bialogiya",
     tutorName: "Ellada Bayramova",
     tutorPhoto: "/images/tutor_images/elladaBayramova.jpg",
