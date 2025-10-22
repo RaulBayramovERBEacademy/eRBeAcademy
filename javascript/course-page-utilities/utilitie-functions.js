@@ -152,3 +152,33 @@ export function showNotification(message, type = "info") {
     }, 300);
   }, 4000);
 }
+
+export function initializeCurriculumAccordion() {
+  const moduleHeaders = document.querySelectorAll(".module-header");
+  moduleHeaders.forEach((header) => {
+    header.addEventListener("click", function () {
+      const module = this.parentElement;
+      const lessons = module.querySelector(".module-lessons");
+
+      // Toggle lessons visibility
+      if (lessons.style.display === "none") {
+        lessons.style.display = "block";
+        this.style.background =
+          "linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%)";
+      } else {
+        lessons.style.display = "none";
+        this.style.background =
+          "linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)";
+      }
+    });
+
+    // Add cursor pointer to indicate clickable
+    header.style.cursor = "pointer";
+
+    // Initially hide lessons
+    const lessons = header.parentElement.querySelector(".module-lessons");
+    if (lessons) {
+      lessons.style.display = "none";
+    }
+  });
+}

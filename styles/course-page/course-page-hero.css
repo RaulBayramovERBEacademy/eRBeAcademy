@@ -1,9 +1,4 @@
 /* Course Hero Section */
-.course-hero {
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-  padding: 2rem 0 3rem;
-  margin-top: 112px;
-}
 
 .course-hero-container {
   max-width: 1200px;
@@ -46,8 +41,9 @@
 
 /* Course Hero Main */
 .course-hero-main {
-  display: grid;
-  grid-template-columns: 1fr 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   gap: 3rem;
   align-items: center;
 }
@@ -55,6 +51,8 @@
 .course-hero-info {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+
   gap: 1.5rem;
 }
 
