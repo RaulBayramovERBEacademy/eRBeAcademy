@@ -52,7 +52,7 @@ class Course {
     price,
     coverImg,
     discount,
-    schedules,
+    schedule ,
   }) {
     if (!CATEGORY_LIST.some((cat) => cat.value === category)) {
       throw new Error(`Invalid category: ${category}`);
@@ -78,7 +78,7 @@ class Course {
     this.price = price; // in USD
     this.coverImg = coverImg;
     this.discount = discount || 0; // percentage discount
-    this.schedules = schedules || [];
+    this.schedule = schedule || [];
   }
 }
 
@@ -98,109 +98,122 @@ const courses = [
     price: 49,
     coverImg: "courses/web",
     discount: 25,
-    // 🆕 Həftəlik dərs planı
+    // 🆕 Həftəlik dərs plan
     schedule: [
       {
         week: 1,
-        title: "JavaScript-ə giriş və mühitin qurulması",
+        module: "JS Əsasları",
+        title: "JavaScript-ə giriş",
         topics: [
           "Proqramlaşdırma anlayışı",
-          "VS Code və Chrome DevTools istifadəsi",
-          "Console.log və dəyişən anlayışı",
+          "Console.log və dəyişənlər",
+          "Vəzifələr və ifadələr",
         ],
       },
       {
         week: 2,
-        title: "Dəyişənlər, Data tipləri və Operatorlar",
+        module: "JS Əsasları",
+        title: "Dəyişənlər və data tipləri",
         topics: [
-          "var, let, const fərqləri",
+          "var, let, const",
           "String, Number, Boolean, Null, Undefined",
           "Əməliyyatlar və tip çevirmələri",
         ],
       },
       {
         week: 3,
-        title: "Şərtlər və Dövrlər",
+        module: "JS Əsasları",
+        title: "Şərtlər və dövrlər",
         topics: ["if-else", "switch-case", "for və while dövrləri"],
       },
       {
         week: 4,
+        module: "Funksiyalar",
         title: "Funksiyalar və Scope",
         topics: [
           "Function declaration vs expression",
           "Arrow funksiyalar",
-          "Scope və closure anlayışı",
+          "Scope və closure",
         ],
       },
       {
         week: 5,
+        module: "Obyekt və Array",
         title: "Array və Object-lərlə işləmək",
         topics: [
-          "Array metodları (map, filter, reduce)",
+          "Array metodları: map, filter, reduce",
           "Object destructuring",
           "Spread və Rest operatorları",
         ],
       },
       {
         week: 6,
-        title: "DOM Manipulyasiyası",
+        module: "DOM Manipulyasiya",
+        title: "DOM əsasları",
         topics: [
-          "Element seçimi və dəyişikliklər",
+          "Element seçimi",
           "Event listener-lər",
-          "Mini interaktiv layihə",
+          "DOM dəyişiklikləri və praktik tapşırıqlar",
         ],
       },
       {
         week: 7,
-        title: "Asinxron JavaScript (callback, promise, async/await)",
+        module: "Asinxron JS",
+        title: "Callback və Promise",
         topics: [
-          "Event loop və task queue",
-          "API-lərdən məlumat çəkmək (fetch)",
-          "JSON məlumatları ilə işləmək",
+          "Callback funksiyalar",
+          "Promise obyektləri",
+          "Fetch API ilə məlumat çəkmək",
         ],
       },
       {
         week: 8,
-        title: "Mini layihə: API ilə işləyən tətbiq",
-        topics: ["Layihə planlaması", "API inteqrasiyası", "UI təkmilləşdirmə"],
+        module: "Asinxron JS",
+        title: "Async/Await və Error Handling",
+        topics: [
+          "Async/Await istifadəsi",
+          "Try-Catch blokları",
+          "Praktik layihə tapşırıqları",
+        ],
       },
       {
         week: 9,
-        title: "Error Handling və Debugging",
+        module: "JS Əlavələri",
+        title: "Event və Form Handling",
         topics: [
-          "try-catch istifadəsi",
-          "Console debugging üsulları",
-          "Common JS səhvləri",
+          "Form elementləri ilə işləmək",
+          "Event delegation",
+          "Validation nümunələri",
         ],
       },
       {
         week: 10,
-        title: "Modullar və Kodun strukturu",
-        topics: [
-          "Modul sistemi (import/export)",
-          "Kodun parçalara bölünməsi",
-          "Reusable funksiyalar",
-        ],
-      },
-      {
-        week: 11,
+        module: "JS Əlavələri",
         title: "Local Storage və Session Storage",
         topics: [
           "Məlumat saxlama üsulları",
-          "Login vəziyyətinin saxlanması",
+          "Login vəziyyətini idarə etmək",
           "Mini storage layihəsi",
         ],
       },
       {
+        week: 11,
+        module: "Layihə",
+        title: "Mini Layihə: API ilə tətbiq",
+        topics: ["Layihə planlaması", "API inteqrasiyası", "UI təkmilləşdirmə"],
+      },
+      {
         week: 12,
+        module: "Layihə",
         title: "Final Layihə və Təkrar",
         topics: [
-          "Bütün öyrənilənlərin tətbiqi",
+          "Tam JS tətbiqi",
           "Kod keyfiyyətinin qiymətləndirilməsi",
           "Layihə təqdimatı",
         ],
       },
     ],
+    // Hibrid yanaşma: modul sistemi + həftəlik plan
   }),
   new Course({
     id: 1002,
@@ -217,6 +230,167 @@ const courses = [
     price: 49,
     coverImg: "courses/web",
     discount: 25,
+    schedule: [
+      // HTML Modulu (1-4 həftə)
+      {
+        week: 1,
+        module: "HTML Əsasları",
+        title: "HTML-ə giriş",
+        topics: [
+          "Veb səhifə və HTML nədir",
+          "HTML sənəd quruluşu: doctype, head, body",
+          "Əsas teqlər: h1-h6, p, a, img, br, hr",
+        ],
+      },
+      {
+        week: 2,
+        module: "HTML Əsasları",
+        title: "Mətn formatlaşdırma və linklər",
+        topics: [
+          "b, strong, i, em, small, mark teqləri",
+          "Anchor (a) ilə daxili və xarici linklər",
+          "target və rel atributları",
+        ],
+      },
+      {
+        week: 3,
+        module: "HTML Əlavələri",
+        title: "Listlər və Cədvəllər",
+        topics: [
+          "ul, ol, li – siyahılar",
+          "Nested listlər",
+          "table, tr, th, td və colspan/rowspan",
+        ],
+      },
+      {
+        week: 4,
+        module: "HTML Əlavələri",
+        title: "Formlar və input elementləri",
+        topics: [
+          "form, input, textarea, select, button",
+          "name, id, value, placeholder atributları",
+          "label ilə elementlərin əlaqələndirilməsi",
+        ],
+      },
+
+      // CSS Modulu (5-8 həftə)
+      {
+        week: 5,
+        module: "CSS Əsasları",
+        title: "CSS-ə giriş və seçicilər",
+        topics: [
+          "CSS nədir, inline/internal/external yollar",
+          "Selector-lar: element, class, id",
+          "Rənglər, fontlar və ölçülər (px, %, em, rem)",
+        ],
+      },
+      {
+        week: 6,
+        module: "CSS Əsasları",
+        title: "Box model və layout",
+        topics: [
+          "Margin, padding, border, content",
+          "display: block, inline, inline-block",
+          "width və height ilə ölçüləndirmə",
+        ],
+      },
+      {
+        week: 7,
+        module: "CSS Əlavələri",
+        title: "Position və z-index",
+        topics: [
+          "Static, relative, absolute, fixed, sticky",
+          "Elementləri yerləşdirmə üsulları",
+          "z-index ilə qatların nizamlanması",
+        ],
+      },
+      {
+        week: 8,
+        module: "CSS Layout",
+        title: "Flexbox və Grid",
+        topics: [
+          "display: flex və justify-content, align-items",
+          "display: grid və grid-template-columns",
+          "Media queries ilə cavablı dizayn",
+        ],
+      },
+
+      // JavaScript Modulu (9-14 həftə)
+      {
+        week: 9,
+        module: "JS Əsasları",
+        title: "JavaScript-ə giriş",
+        topics: [
+          "Proqramlaşdırma anlayışı",
+          "Console.log və dəyişənlər",
+          "Vəzifələr və ifadələr",
+        ],
+      },
+      {
+        week: 10,
+        module: "JS Əsasları",
+        title: "Dəyişənlər və data tipləri",
+        topics: [
+          "var, let, const",
+          "String, Number, Boolean, Null, Undefined",
+          "Əməliyyatlar və tip çevirmələri",
+        ],
+      },
+      {
+        week: 11,
+        module: "JS Əsasları",
+        title: "Şərtlər və dövrlər",
+        topics: ["if-else", "switch-case", "for və while dövrləri"],
+      },
+      {
+        week: 12,
+        module: "Funksiyalar",
+        title: "Funksiyalar və Scope",
+        topics: [
+          "Function declaration vs expression",
+          "Arrow funksiyalar",
+          "Scope və closure",
+        ],
+      },
+      {
+        week: 13,
+        module: "Obyekt və Array",
+        title: "Array və Object-lərlə işləmək",
+        topics: [
+          "Array metodları: map, filter, reduce",
+          "Object destructuring",
+          "Spread və Rest operatorları",
+        ],
+      },
+      {
+        week: 14,
+        module: "DOM Manipulyasiya",
+        title: "DOM əsasları və event-lər",
+        topics: [
+          "Element seçimi",
+          "Event listener-lər",
+          "DOM dəyişiklikləri və praktik tapşırıqlar",
+        ],
+      },
+
+      // Layihə Modulu (15-16 həftə)
+      {
+        week: 15,
+        module: "Mini Layihə",
+        title: "API ilə mini layihə",
+        topics: ["Layihə planlaması", "API inteqrasiyası", "UI təkmilləşdirmə"],
+      },
+      {
+        week: 16,
+        module: "Final Layihə",
+        title: "Tam veb sayt layihəsi və təkrar",
+        topics: [
+          "Bütün öyrənilənləri tətbiq etmək",
+          "Kod keyfiyyətinin qiymətləndirilməsi",
+          "Layihə təqdimatı",
+        ],
+      },
+    ],
   }),
   new Course({
     id: 1002,
@@ -236,15 +410,17 @@ const courses = [
     schedule: [
       {
         week: 1,
-        title: "HTML əsaslarına giriş",
+        module: "HTML Əsasları",
+        title: "HTML-ə giriş",
         topics: [
-          "Veb səhifə nədir?",
-          "HTML sənədinin quruluşu (doctype, head, body)",
-          "Əsas teqlər: h1–h6, p, a, img, br, hr",
+          "Veb səhifə və HTML nədir",
+          "HTML sənəd quruluşu: doctype, head, body",
+          "Əsas teqlər: h1-h6, p, a, img, br, hr",
         ],
       },
       {
         week: 2,
+        module: "HTML Əsasları",
         title: "Mətn formatlaşdırma və linklər",
         topics: [
           "b, strong, i, em, small, mark teqləri",
@@ -254,34 +430,38 @@ const courses = [
       },
       {
         week: 3,
+        module: "HTML Əlavələri",
         title: "Listlər və Cədvəllər",
         topics: [
-          "ul, ol, li – siyahıların yaradılması",
+          "ul, ol, li – siyahılar",
           "Nested listlər",
-          "table, tr, th, td teqləri və colspan/rowspan",
+          "table, tr, th, td və colspan/rowspan",
         ],
       },
       {
         week: 4,
+        module: "HTML Əlavələri",
         title: "Formlar və input elementləri",
         topics: [
           "form, input, textarea, select, button",
-          "name, id, value və placeholder atributları",
-          "label ilə form elementlərini əlaqələndirmək",
+          "name, id, value, placeholder atributları",
+          "label ilə elementlərin əlaqələndirilməsi",
         ],
       },
       {
         week: 5,
+        module: "CSS Əsasları",
         title: "CSS-ə giriş və seçicilər",
         topics: [
-          "CSS nədir və necə əlavə olunur (inline, internal, external)",
-          "Basic selector-lar: element, class, id",
+          "CSS nədir, inline/internal/external yollar",
+          "Selector-lar: element, class, id",
           "Rənglər, fontlar və ölçülər (px, %, em, rem)",
         ],
       },
       {
         week: 6,
-        title: "Box modeli və layout əsasları",
+        module: "CSS Əsasları",
+        title: "Box model və layout",
         topics: [
           "Margin, padding, border, content",
           "display: block, inline, inline-block",
@@ -290,38 +470,42 @@ const courses = [
       },
       {
         week: 7,
+        module: "CSS Əlavələri",
         title: "Position və z-index",
         topics: [
-          "Static, relative, absolute, fixed, sticky mövqeləri",
+          "Static, relative, absolute, fixed, sticky",
           "Elementləri yerləşdirmə üsulları",
-          "z-index ilə qat nizamlanması",
+          "z-index ilə qatların nizamlanması",
         ],
       },
       {
         week: 8,
+        module: "CSS Layout",
         title: "Flexbox ilə layout dizaynı",
         topics: [
-          "display: flex əsas anlayışları",
-          "justify-content, align-items, flex-wrap",
-          "Praktika: header–main–footer layout qurmaq",
+          "display: flex, justify-content, align-items, flex-wrap",
+          "Header–main–footer layout praktikası",
+          "Mini interaktiv dizayn layihəsi",
         ],
       },
       {
         week: 9,
-        title: "Grid sistemi və cavablı dizayn (responsive design)",
+        module: "CSS Layout",
+        title: "Grid sistemi və cavablı dizayn",
         topics: [
           "display: grid və grid-template-columns",
           "Media queries ilə mobil uyğun dizayn",
-          "Grid + Flex kombinasiyası",
+          "Grid + Flex kombinasiya üsulları",
         ],
       },
       {
         week: 10,
+        module: "Final Layihə",
         title: "Mini layihə və təkrar",
         topics: [
-          "Tam veb səhifə dizaynı (portfolio və ya kurs səhifəsi)",
-          "Layihənin strukturlaşdırılması",
-          "Kod keyfiyyətinə diqqət və son təkrar",
+          "Tam veb səhifə dizaynı (portfolio / kurs səhifəsi)",
+          "Layihə strukturlaşdırması və kod keyfiyyəti",
+          "Final təqdimat və qiymətləndirmə",
         ],
       },
     ],

@@ -1,4 +1,7 @@
-import { renderCourseHeroSection } from "./course-page-utilities/renderCourseHero.js";
+import {
+  renderCourseHeroSection,
+  renderCurriculumAccordion,
+} from "./course-page-utilities/renderCourseHero.js";
 import {
   addSmoothScrolling,
   initializeEnrollmentButton,
@@ -13,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function initializeCoursePage() {
   renderCourseHeroSection();
+  renderCurriculumAccordion();
   // Add smooth scrolling for internal links
   addSmoothScrolling();
 

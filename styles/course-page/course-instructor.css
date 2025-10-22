@@ -1,0 +1,62 @@
+/* Instructor Profile */
+.instructor-profile {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.instructor-avatar {
+  flex-shrink: 0;
+}
+
+.instructor-avatar img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--primary-color);
+}
+
+.instructor-info {
+  flex: 1;
+}
+
+.instructor-info h3 {
+  color: var(--black-100);
+  font-size: var(--h3);
+  margin-bottom: 0.5rem;
+}
+
+.instructor-title {
+  color: var(--primary-color);
+  font-size: var(--small);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.instructor-bio {
+  color: var(--black-75);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.instructor-stats {
+  display: flex;
+  gap: 2rem;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: var(--h2);
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.stat-label {
+  font-size: var(--small);
+  color: var(--black-75);
+}

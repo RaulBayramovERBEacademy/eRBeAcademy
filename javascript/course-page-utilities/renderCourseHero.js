@@ -4,6 +4,7 @@ export function renderCourseHeroSection() {
   if (heroSection) {
     const id = new URLSearchParams(window.location.search).get("id");
     const course = courses.find((c) => c.id === parseInt(id));
+
     let courseHeroSectionHTML = `
         <div class="course-hero-container">
           <div class="course-hero-content">
@@ -70,4 +71,34 @@ export function renderCourseHeroSection() {
         </div>`;
     heroSection.innerHTML = courseHeroSectionHTML;
   }
+}
+export function renderCurriculumAccordion() {
+  const id = new URLSearchParams(window.location.search).get("id");
+  const course = courses.find((c) => c.id === parseInt(id));
+  let HTML = "";
+  if (course.schedule.length === 0) {
+    HTML = `<div class="no-curriculum">Bu kurs üçün hələlik dərs planı mövcud deyil.</div>`;
+  } else {
+    course.schedule.forEach((week) => {
+      HTML += `<div class = "curriculum-module">
+      <div class="module-header">
+        <h3>Həftə ${week.week}: ${week.module}</h3>
+        <p>${week.title}</p>
+      </div>
+      <div class="module-lessons">
+      ${week.topics
+        .map(
+          (lesson) => `
+        <div class="lesson-item">
+          <i class="fa-solid fa-play-circle"></i>
+          <span>${lesson}</span>
+        </div>
+      `
+        )
+        .join("")}
+      </div></div>`;
+    });
+  }
+  let curriculumContainer = document.querySelector(".curriculum");
+  curriculumContainer.innerHTML = HTML;
 }
