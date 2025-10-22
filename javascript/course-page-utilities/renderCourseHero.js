@@ -1,4 +1,4 @@
-import { courses } from "../data/data.js";
+import { courses, SUBCATEGORY_LIST } from "../data/data.js";
 export function renderCourseHeroSection() {
   const heroSection = document.querySelector(".course-hero");
   if (heroSection) {
@@ -13,7 +13,11 @@ export function renderCourseHeroSection() {
               <i class="fa-solid fa-chevron-right"></i>
               <a href="#">Kurslar</a>
               <i class="fa-solid fa-chevron-right"></i>
-              <span>${course.subcategory}</span>
+              <span>${
+                SUBCATEGORY_LIST[course.category].find((subcategory) => {
+                  return subcategory.value === course.subcategory;
+                })?.label
+              }</span>
             </div>
 
             <div class="course-hero-main">
@@ -22,7 +26,11 @@ export function renderCourseHeroSection() {
                   <i class="fa-solid fa-code"></i>
                   <span>${course.category}</span>
                 </div>
-                <h1>${course.subcategory}</h1>
+                <h1>${
+                  SUBCATEGORY_LIST[course.category].find((subcategory) => {
+                    return subcategory.value === course.subcategory;
+                  })?.label
+                }</h1>
                 <p class="course-description">
                   ${course.description}
                 </p>
@@ -101,4 +109,15 @@ export function renderCurriculumAccordion() {
   }
   let curriculumContainer = document.querySelector(".curriculum");
   curriculumContainer.innerHTML = HTML;
+  renderEnrollmentCardPrice(course);
+}
+
+function renderEnrollmentCardPrice(course) {
+  let enrollmentPrice = document.querySelector(".enrollment-price");
+  enrollmentPrice.innerHTML = `
+    <span class="price-current">&#8382;${
+      course.price - (course.price * (course.discount || 0)) / 100
+    }</span>
+    <span class="price-original">&#8382;${course.price}</span>
+ `;
 }
