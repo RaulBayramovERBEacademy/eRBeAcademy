@@ -133,6 +133,7 @@
   }
   .breadcrumb {
     margin: 0px;
+    margin-bottom: 1rem;
   }
   .course-details-container {
     padding: 0 1rem;

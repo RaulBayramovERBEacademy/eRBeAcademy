@@ -18,7 +18,7 @@ export function renderCourses(coursesList) {
       </div>
       <div class="course-info">
         <h3 class="course-title">${course.title}</h3>
-        <div class="course-tutor">By ${course.tutorName}</div>
+        <div class="course-tutor">Tutor: ${course.instructor.name}</div>
         <div class="course-price">
           <span class="current-price">
           ${formatPrice(course.price || 0)}</span>

@@ -14,7 +14,8 @@
 
 .module-header {
   background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-  padding: 1.5rem;
+  padding: 16px;
+  margin: 0px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -29,7 +30,7 @@
 .module-header p {
   color: var(--black-75);
   font-size: var(--body);
-  margin: 0px;
+  margin: 0px !important;
   padding: 0px;
 }
 .module-duration {

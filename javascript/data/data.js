@@ -37,11 +37,21 @@ const SUBCATEGORY_LIST = {
     { value: "biology", label: "Biologiya" },
   ],
 };
+
+class Instructor {
+  constructor(name, profession, description, tutorIMG) {
+    this.name = name;
+    this.profession = profession;
+    this.description = description;
+    this.tutorIMG = tutorIMG;
+  }
+}
+
 class Course {
   constructor({
     id,
     title,
-    tutorName,
+    instructor,
     tutorPhoto,
     description,
     startDate,
@@ -52,7 +62,7 @@ class Course {
     price,
     coverImg,
     discount,
-    schedule ,
+    schedule,
   }) {
     if (!CATEGORY_LIST.some((cat) => cat.value === category)) {
       throw new Error(`Invalid category: ${category}`);
@@ -67,7 +77,7 @@ class Course {
     }
     this.id = id; // unique identifier
     this.title = title;
-    this.tutorName = tutorName;
+    this.instructor = instructor;
     this.tutorPhoto = tutorPhoto; // image path
     this.description = description;
     this.startDate = startDate; // YYYY-MM-DD
@@ -86,8 +96,12 @@ const courses = [
   new Course({
     id: 1001,
     title: "Javascript",
-    tutorName: "Raul Bayramov",
-    tutorPhoto: "/images/tutor_images/raulBayramov.jpg",
+    instructor: new Instructor(
+      "Raul Bayramov",
+      "Junior Full-stack developer",
+      "Certified expert in Computer Science and Information Technology. Full-stack developer with experience at large companies including Andersen and A1QA, skilled in React and Node.js.",
+      "/images/tutor_images/raulBayramov.jpg"
+    ),
     description:
       "Dinamik veb saytlar yaratmağı öyrən, real layihələrlə JavaScript biliklərini möhkəmləndir.",
     startDate: "2025-11-01",
@@ -218,8 +232,12 @@ const courses = [
   new Course({
     id: 1002,
     title: "Veb programlaşdırma",
-    tutorName: "Raul Bayramov",
-    tutorPhoto: "/images/tutor_images/raulBayramov.jpg",
+    instructor: new Instructor(
+      "Raul Bayramov",
+      "Junior Full-stack developer",
+      "Certified expert in Computer Science and Information Technology. Full-stack developer with experience at large companies including Andersen and A1QA, skilled in React and Node.js.",
+      "/images/tutor_images/raulBayramov.jpg"
+    ),
     description:
       "Göz oxşayan və müasir dizaynlı saytları sıfırdan qurmağı öyrən.",
     startDate: "2025-09-25",
@@ -395,8 +413,12 @@ const courses = [
   new Course({
     id: 1002,
     title: "HTML/CSS",
-    tutorName: "Raul Bayramov",
-    tutorPhoto: "/images/tutor_images/raulBayramov.jpg",
+    instructor: new Instructor(
+      "Raul Bayramov",
+      "Junior Full-stack developer",
+      "Certified expert in Computer Science and Information Technology. Full-stack developer with experience at large companies including Andersen and A1QA, skilled in React and Node.js.",
+      "/images/tutor_images/raulBayramov.jpg"
+    ),
     description:
       "Göz oxşayan və müasir dizaynlı saytları sıfırdan qurmağı öyrən.",
     startDate: "2025-09-25",
@@ -513,8 +535,12 @@ const courses = [
   new Course({
     id: 1003,
     title: "ICT Literacy",
-    tutorName: "Raul Bayramov",
-    tutorPhoto: "/images/tutor_images/raulBayramov.jpg",
+    instructor: new Instructor(
+      "Raul Bayramov",
+      "Junior Full-stack developer",
+      "Certified expert in Computer Science and Information Technology. Full-stack developer with experience at large companies including Andersen and A1QA, skilled in React and Node.js.",
+      "/images/tutor_images/raulBayramov.jpg"
+    ),
     description:
       "Ofis proqramları, internet təhlükəsizliyi və rəqəmsal bacarıqlarda tam hazırlıq əldə et.",
     startDate: "2025-10-01",
@@ -529,8 +555,12 @@ const courses = [
   new Course({
     id: 1004,
     title: "Informatika",
-    tutorName: "Raul Bayramov",
-    tutorPhoto: "/images/tutor_images/raulBayramov.jpg",
+    instructor: new Instructor(
+      "Raul Bayramov",
+      "Junior Full-stack developer",
+      "Certified expert in Computer Science and Information Technology. Full-stack developer with experience at large companies including Andersen and A1QA, skilled in React and Node.js.",
+      "/images/tutor_images/raulBayramov.jpg"
+    ),
     description:
       "Ofis proqramları, internet təhlükəsizliyi və rəqəmsal bacarıqlarda tam hazırlıq əldə et.",
     startDate: "2025-10-01",
@@ -545,8 +575,12 @@ const courses = [
   new Course({
     id: 1005,
     title: "Bialogiya",
-    tutorName: "Ellada Bayramova",
-    tutorPhoto: "/images/tutor_images/elladaBayramova.jpg",
+    instructor: new Instructor(
+      "Ellada Bayramova",
+      "Biologiya və təbiət elmləri üzrə müəllim, tutor",
+      "Biologiya və təbiət elmləri üzrə sertifikatlı müəllim, 2+ illik müəllimlik və 2+ illik repetitorluq təcrübəsinə malikdir.",
+      "/images/tutor_images/elladaBayramova.jpg"
+    ),
     description:
       "Canlıların quruluşu, funksiyaları və ekosistemlərlə əlaqələrini dərindən öyrən.",
     startDate: "2025-10-01",
@@ -561,8 +595,12 @@ const courses = [
   new Course({
     id: 1006,
     title: "Təbiət",
-    tutorName: "Ellada Bayramova",
-    tutorPhoto: "/images/tutor_images/elladaBayramova.jpg",
+    instructor: new Instructor(
+      "Ellada Bayramova",
+      "Biologiya və təbiət elmləri üzrə müəllim, tutor",
+      "Biologiya və təbiət elmləri üzrə sertifikatlı müəllim, 2+ illik müəllimlik və 2+ illik repetitorluq təcrübəsinə malikdir.",
+      "/images/tutor_images/elladaBayramova.jpg"
+    ),
     description:
       "Ətraf mühitin qorunması, təbii resurslar və dayanıqlı inkişaf mövzularında biliklər əldə et.",
     startDate: "2025-10-01",
@@ -577,8 +615,12 @@ const courses = [
   new Course({
     id: 1007,
     title: "Riyaziyyat (7-12)",
-    tutorName: "Ilkin Mustafayev",
-    tutorPhoto: "/images/tutor_images/ilkinMustafayev.jpg",
+    instructor: new Instructor(
+      "Ilkin Mustafayev",
+      "Riyaziyyat müəllimi",
+      "1–12-ci siniflər üzrə sertifikatlı riyaziyyat müəllimi, 3+ illik repetitorluq təcrübəsinə malikdir, 50+ uğurlu tələbə yetişdirmişdir.",
+      "/images/tutor_images/ilkinMustafayev.jpg"
+    ),
     description:
       "Əsas riyazi anlayışlar, funksiyalar və həndəsə mövzularında dərin biliklər əldə et.",
     startDate: "2025-10-01",
@@ -593,6 +635,12 @@ const courses = [
   new Course({
     id: 1008,
     title: "Riyaziyyat (1-6)",
+    instructor: new Instructor(
+      "Ilkin Mustafayev",
+      "Riyaziyyat müəllimi",
+      "1–12-ci siniflər üzrə sertifikatlı riyaziyyat müəllimi, 3+ illik repetitorluq təcrübəsinə malikdir, 50+ uğurlu tələbə yetişdirmişdir.",
+      "/images/tutor_images/ilkinMustafayev.jpg"
+    ),
     tutorName: "Raul Bayramov",
     tutorPhoto: "/images/tutor_images/raulBayramov.jpg",
     description:
@@ -609,8 +657,12 @@ const courses = [
   new Course({
     id: 1009,
     title: "Milli İmtahana Hazırlıq - Riyaziyyat",
-    tutorName: "Ilkin Mustafayev",
-    tutorPhoto: "/images/tutor_images/ilkinMustafayev.jpg",
+    instructor: new Instructor(
+      "Ilkin Mustafayev",
+      "Riyaziyyat müəllimi",
+      "1–12-ci siniflər üzrə sertifikatlı riyaziyyat müəllimi, 3+ illik repetitorluq təcrübəsinə malikdir, 50+ uğurlu tələbə yetişdirmişdir.",
+      "/images/tutor_images/ilkinMustafayev.jpg"
+    ),
     description:
       "Əsas riyazi anlayışlar, funksiyalar və həndəsə mövzularında dərin biliklər əldə et.",
     startDate: "2025-10-01",
@@ -625,8 +677,12 @@ const courses = [
   new Course({
     id: 1010,
     title: "Milli İmtahana Hazırlıq - Bialogiya",
-    tutorName: "Ellada Bayramova",
-    tutorPhoto: "/images/tutor_images/elladaBayramova.jpg",
+    instructor: new Instructor(
+      "Ellada Bayramova",
+      "Biologiya və təbiət elmləri üzrə müəllim, tutor",
+      "Biologiya və təbiət elmləri üzrə sertifikatlı müəllim, 2+ illik müəllimlik və 2+ illik repetitorluq təcrübəsinə malikdir.",
+      "/images/tutor_images/elladaBayramova.jpg"
+    ),
     description:
       "Canlıların quruluşu, funksiyaları və ekosistemlərlə əlaqələrini dərindən öyrən.",
     startDate: "2025-10-01",

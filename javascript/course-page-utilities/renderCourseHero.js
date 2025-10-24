@@ -110,6 +110,7 @@ export function renderCurriculumAccordion() {
   let curriculumContainer = document.querySelector(".curriculum");
   curriculumContainer.innerHTML = HTML;
   renderEnrollmentCardPrice(course);
+  renderRelatedCourses(course);
 }
 
 function renderEnrollmentCardPrice(course) {
@@ -120,4 +121,24 @@ function renderEnrollmentCardPrice(course) {
     }</span>
     <span class="price-original">&#8382;${course.price}</span>
  `;
+}
+
+function renderRelatedCourses(course) {
+  let relatedCoursesHTML = "<h3>Əlaqəli Kurslar</h3>";
+  const relatedCourses = courses.filter((course_) => {
+    return course_.category === course.category;
+  });
+  console.log(relatedCourses);
+  relatedCourses.forEach((course_) => {
+    relatedCoursesHTML += `
+              <div class="related-course-item">
+                <img src="/images/${course_.coverImg}.png" alt="HTML/CSS Kursu" />
+                <div class="related-course-info">
+                  <h4>${course_.title}</h4>
+                  <span class="related-course-price">&#8382;${course_.price}</span>
+                </div>
+              </div>
+    `;
+  });
+  document.querySelector(".related-courses").innerHTML = relatedCoursesHTML;
 }
