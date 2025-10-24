@@ -111,6 +111,7 @@ export function renderCurriculumAccordion() {
   curriculumContainer.innerHTML = HTML;
   renderEnrollmentCardPrice(course);
   renderRelatedCourses(course);
+  renderAboutInstructor(course);
 }
 
 function renderEnrollmentCardPrice(course) {
@@ -141,4 +142,22 @@ function renderRelatedCourses(course) {
     `;
   });
   document.querySelector(".related-courses").innerHTML = relatedCoursesHTML;
+}
+
+function renderAboutInstructor(course) {
+  document.querySelector(".instructor-profile").innerHTML = `
+      <div class="instructor-avatar">
+        <img
+          src="${course.instructor.tutorIMG}"
+          alt="Raul Bayramov"
+        />
+      </div>
+      <div class="instructor-info">
+        <h3>${course.instructor.name}</h3>
+        <p class="instructor-title">${course.instructor.profession}</p>
+        <p class="instructor-bio">
+          ${course.instructor.description}
+        </p>
+      </div>
+  `;
 }
