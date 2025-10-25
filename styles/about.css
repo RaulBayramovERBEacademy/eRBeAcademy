@@ -1,6 +1,6 @@
-.about-main {
+/* .about-main {
   margin-top: 112px;
-}
+} */
 
 .about-hero {
   display: grid;
@@ -8,7 +8,11 @@
   align-items: center;
   gap: 40px;
   padding: 60px 24px;
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.06), rgba(34, 197, 94, 0.06));
+  background: linear-gradient(
+    135deg,
+    rgba(37, 99, 235, 0.06),
+    rgba(34, 197, 94, 0.06)
+  );
 }
 
 .about-hero__content h1 {
@@ -136,6 +140,7 @@
   border: 1px solid var(--thirty-color);
   border-radius: 16px;
   padding: 24px;
+  box-sizing: border-box;
 }
 
 .cta-btn {
@@ -148,17 +153,25 @@
 }
 
 @media (max-width: 900px) {
-  .about-hero { grid-template-columns: 1fr; }
-  .values-grid { grid-template-columns: 1fr 1fr; }
-  .stats-grid { grid-template-columns: 1fr 1fr; }
-  .team-grid { grid-template-columns: 1fr 1fr; }
+  .about-hero {
+    grid-template-columns: 1fr;
+  }
+  .values-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .team-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (max-width: 600px) {
-  .values-grid { grid-template-columns: 1fr; }
-  .team-grid { grid-template-columns: 1fr; }
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
 }
-
-
-
-

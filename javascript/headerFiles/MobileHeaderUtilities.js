@@ -49,7 +49,7 @@ export function renderMobileNavbar(header) {
       if (pageKey === "categories") {
         const courseContainer = document.querySelector(".courses");
         if (!courseContainer) {
-          return;
+          window.location.href = "../../index.html#courses";
         }
         const top =
           courseContainer.getBoundingClientRect().top + window.scrollY - 80;
