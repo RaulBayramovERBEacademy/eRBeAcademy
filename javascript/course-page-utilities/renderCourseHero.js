@@ -56,7 +56,11 @@ export function renderCourseHeroSection() {
 
                 <div class="course-price">
                   <span class="current-price">&#8382;${
-                    course.price - (course.price * (course.discount || 0)) / 100
+                    Math.floor(
+                      (course.price - (course.price * (course.discount || 0)) / 100) * 100
+                    ) / 100
+                      .toFixed(2)
+                    
                   }</span>
                   <span class="original-price">&#8382;${course.price}</span>
                   <span class="discount">${String(
