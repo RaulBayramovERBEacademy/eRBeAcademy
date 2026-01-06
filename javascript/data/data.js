@@ -580,7 +580,7 @@ Bununla yanaşı, müəllimlik imtahanını uğurla vermişəm və hal-hazırda 
     subcategory: "informatics",
     price: 100,
     coverImg: "courses/inf",
-    discount: 20,
+    discount: 0,
     schedule: [
       // 1. Kompüterə giriş və informasiya (1–5 həftə)
       {
