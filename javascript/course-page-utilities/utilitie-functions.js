@@ -1,3 +1,5 @@
+import { addToCart, updateCartBadge } from "../cart/cart-utilities.js";
+
 export function addSmoothScrolling() {
   const links = document.querySelectorAll('a[href^="#"]');
 
@@ -44,6 +46,9 @@ export function initializeEnrollmentButton() {
           this.style.background = "";
         }, 3000);
       }, 2000);
+      const id = new URLSearchParams(window.location.search).get("id");
+      addToCart(id);
+      updateCartBadge();
     });
   }
 }

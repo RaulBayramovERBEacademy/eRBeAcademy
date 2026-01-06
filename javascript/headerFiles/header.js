@@ -1,5 +1,7 @@
 import { renderMobileNavbar } from "../headerFiles/MobileHeaderUtilities.js";
 import { categoriesDropdown } from "../headerFiles/categories.js";
+import { updateCartBadge } from "../cart/cart-utilities.js";
+
 document.addEventListener("DOMContentLoaded", function () {
   (async function () {
     try {
@@ -21,6 +23,13 @@ document.addEventListener("DOMContentLoaded", function () {
       document.querySelector("#user_icon").addEventListener("click", () => {
         window.location.href = "../HTML/auth.html";
       });
+      
+      const cartIcon = document.querySelector("#cart_icon");
+      if (cartIcon) {
+        cartIcon.addEventListener("click", () => {
+          window.location.href = "../HTML/cart.html";
+        });
+      }
       function wait100s() {}
       function updateHeaderLayout() {
         let header = document.querySelector("header");
@@ -61,6 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       updateHeaderLayout();
       categoriesDropdown();
+      updateCartBadge();
       window.addEventListener("resize", updateHeaderLayout);
     } catch (error) {
       console.log(error);

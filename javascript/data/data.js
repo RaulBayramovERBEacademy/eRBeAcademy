@@ -94,12 +94,14 @@ class Course {
 
 const courses = [
   new Course({
-    id: 1001,
+    id: 1000,
     title: "Javascript",
     instructor: new Instructor(
       "Raul Bayramov",
-      "Junior Full-stack developer",
-      "Certified expert in Computer Science and Information Technology. Full-stack developer with experience at large companies including Andersen and A1QA, skilled in React and Node.js.",
+      "Junior Full-stack developer/Informatika müəllimi",
+      `Kompüter Elmləri və İnformasiya Texnologiyaları üzrə sertifikatlı mütəxəssisəm. Andersen və A1QA kimi iri şirkətlərdə iş təcrübəsi olan, React və Node.js texnologiyaları üzrə ixtisaslaşmış full-stack developerəm.
+
+Bununla yanaşı, müəllimlik imtahanını uğurla vermişəm və hal-hazırda tələbələri imtahanlara və praktiki biliklərə hazırlayan müəllim kimi fəaliyyət göstərirəm. Real proqramlaşdırma təcrübəsini tədris prosesi ilə birləşdirərək, mövzuları sadə, aydın və praktik formada izah edirəm.`,
       "/images/tutor_images/raulBayramov.jpg"
     ),
     description:
@@ -230,12 +232,14 @@ const courses = [
     // Hibrid yanaşma: modul sistemi + həftəlik plan
   }),
   new Course({
-    id: 1002,
+    id: 1001,
     title: "Veb programlaşdırma",
     instructor: new Instructor(
       "Raul Bayramov",
-      "Junior Full-stack developer",
-      "Certified expert in Computer Science and Information Technology. Full-stack developer with experience at large companies including Andersen and A1QA, skilled in React and Node.js.",
+      "Junior Full-stack developer/Informatika müəllimi",
+      `Kompüter Elmləri və İnformasiya Texnologiyaları üzrə sertifikatlı mütəxəssisəm. Andersen və A1QA kimi iri şirkətlərdə iş təcrübəsi olan, React və Node.js texnologiyaları üzrə ixtisaslaşmış full-stack developerəm.
+
+Bununla yanaşı, müəllimlik imtahanını uğurla vermişəm və hal-hazırda tələbələri imtahanlara və praktiki biliklərə hazırlayan müəllim kimi fəaliyyət göstərirəm. Real proqramlaşdırma təcrübəsini tədris prosesi ilə birləşdirərək, mövzuları sadə, aydın və praktik formada izah edirəm.`,
       "/images/tutor_images/raulBayramov.jpg"
     ),
     description:
@@ -415,8 +419,10 @@ const courses = [
     title: "HTML/CSS",
     instructor: new Instructor(
       "Raul Bayramov",
-      "Junior Full-stack developer",
-      "Certified expert in Computer Science and Information Technology. Full-stack developer with experience at large companies including Andersen and A1QA, skilled in React and Node.js.",
+      "Junior Full-stack developer/Informatika müəllimi",
+      `Kompüter Elmləri və İnformasiya Texnologiyaları üzrə sertifikatlı mütəxəssisəm. Andersen və A1QA kimi iri şirkətlərdə iş təcrübəsi olan, React və Node.js texnologiyaları üzrə ixtisaslaşmış full-stack developerəm.
+
+Bununla yanaşı, müəllimlik imtahanını uğurla vermişəm və hal-hazırda tələbələri imtahanlara və praktiki biliklərə hazırlayan müəllim kimi fəaliyyət göstərirəm. Real proqramlaşdırma təcrübəsini tədris prosesi ilə birləşdirərək, mövzuları sadə, aydın və praktik formada izah edirəm.`,
       "/images/tutor_images/raulBayramov.jpg"
     ),
     description:
@@ -537,8 +543,10 @@ const courses = [
     title: "ICT Literacy",
     instructor: new Instructor(
       "Raul Bayramov",
-      "Junior Full-stack developer",
-      "Certified expert in Computer Science and Information Technology. Full-stack developer with experience at large companies including Andersen and A1QA, skilled in React and Node.js.",
+      "Junior Full-stack developer/Informatika müəllimi",
+      `Kompüter Elmləri və İnformasiya Texnologiyaları üzrə sertifikatlı mütəxəssisəm. Andersen və A1QA kimi iri şirkətlərdə iş təcrübəsi olan, React və Node.js texnologiyaları üzrə ixtisaslaşmış full-stack developerəm.
+
+Bununla yanaşı, müəllimlik imtahanını uğurla vermişəm və hal-hazırda tələbələri imtahanlara və praktiki biliklərə hazırlayan müəllim kimi fəaliyyət göstərirəm. Real proqramlaşdırma təcrübəsini tədris prosesi ilə birləşdirərək, mövzuları sadə, aydın və praktik formada izah edirəm.`,
       "/images/tutor_images/raulBayramov.jpg"
     ),
     description:
@@ -549,7 +557,7 @@ const courses = [
     category: "programming",
     subcategory: "ict-literacy",
     price: 49,
-    coverImg: "courses/inf",
+    coverImg: "courses/ICT",
     discount: 25,
   }),
   new Course({
@@ -557,8 +565,10 @@ const courses = [
     title: "Informatika",
     instructor: new Instructor(
       "Raul Bayramov",
-      "Junior Full-stack developer",
-      "Certified expert in Computer Science and Information Technology. Full-stack developer with experience at large companies including Andersen and A1QA, skilled in React and Node.js.",
+      "Junior Full-stack developer/Informatika müəllimi",
+      `Kompüter Elmləri və İnformasiya Texnologiyaları üzrə sertifikatlı mütəxəssisəm. Andersen və A1QA kimi iri şirkətlərdə iş təcrübəsi olan, React və Node.js texnologiyaları üzrə ixtisaslaşmış full-stack developerəm.
+
+Bununla yanaşı, müəllimlik imtahanını uğurla vermişəm və hal-hazırda tələbələri imtahanlara və praktiki biliklərə hazırlayan müəllim kimi fəaliyyət göstərirəm. Real proqramlaşdırma təcrübəsini tədris prosesi ilə birləşdirərək, mövzuları sadə, aydın və praktik formada izah edirəm.`,
       "/images/tutor_images/raulBayramov.jpg"
     ),
     description:
@@ -568,9 +578,210 @@ const courses = [
     level: "Başlanğıc",
     category: "teaching-certification",
     subcategory: "informatics",
-    price: 79,
+    price: 100,
     coverImg: "courses/inf",
-    discount: 25,
+    discount: 20,
+    schedule: [
+      // 1. Kompüterə giriş və informasiya (1–5 həftə)
+      {
+        week: 1,
+        module: "Kompüterə Giriş",
+        title: "Kompüter və informasiya anlayışı",
+        topics: [
+          "İnformasiya anlayışı",
+          "Kompüterin təyinatı",
+          "Kompüter növləri",
+        ],
+      },
+      {
+        week: 2,
+        module: "Kompüter Quruluşu",
+        title: "Əsas komponentlər",
+        topics: [
+          "Motherboard",
+          "CPU və xüsusiyyətləri",
+          "RAM, ROM, Cache, Virtual Memory",
+        ],
+      },
+      {
+        week: 3,
+        module: "Periferiya",
+        title: "Giriş və çıxış qurğuları",
+        topics: [
+          "Klaviatura və mouse",
+          "Printer, monitor",
+          "Portlar: USB, HDMI, Audio",
+        ],
+      },
+      {
+        week: 4,
+        module: "İnformasiya və Kodlama",
+        title: "Kodlaşdırma sistemləri",
+        topics: [
+          "ASCII və Unicode",
+          "Bit və Byte",
+          "Say sistemləri",
+        ],
+      },
+      {
+        week: 5,
+        module: "Məlumat Ölçüləri",
+        title: "Ölçü vahidləri",
+        topics: [
+          "KB, MB, GB, TB",
+          "Binary və Decimal",
+        ],
+      },
+    
+      // 2. Windows 10 (6–9 həftə)
+      {
+        week: 6,
+        module: "Windows 10",
+        title: "Əməliyyat sistemi",
+        topics: [
+          "OS anlayışı",
+          "Boot prosesi",
+          "Shutdown, Restart, Sleep",
+        ],
+      },
+      {
+        week: 7,
+        module: "Windows İnterfeysi",
+        title: "Desktop və Taskbar",
+        topics: ["Start menyu", "Pəncərələr", "Fayl Explorer"],
+      },
+      {
+        week: 8,
+        module: "Fayl Sistemi",
+        title: "Fayllar və qovluqlar",
+        topics: ["Create, delete", "Copy, move", "File types"],
+      },
+      {
+        week: 9,
+        module: "Sistem Ayarları",
+        title: "Control Panel",
+        topics: ["Display", "Language", "Users", "Programs"],
+      },
+    
+      // 3. MS Word (10–13 həftə) ✅ 4 həftə
+      {
+        week: 10,
+        module: "MS Word",
+        title: "Word-ə giriş",
+        topics: ["İnterfeys", "Yeni sənəd", "Save / Open"],
+      },
+      {
+        week: 11,
+        module: "MS Word",
+        title: "Mətn formatlama",
+        topics: ["Font", "Paragraph", "Styles"],
+      },
+      {
+        week: 12,
+        module: "MS Word",
+        title: "Cədvəllər və obyektlər",
+        topics: ["Tables", "Pictures", "SmartArt"],
+      },
+      {
+        week: 13,
+        module: "MS Word",
+        title: "Uzun sənədlər",
+        topics: ["Mündəricat", "Header/Footer", "PDF export"],
+      },
+    
+      // 4. MS PowerPoint (14–16 həftə) ✅ 3 həftə
+      {
+        week: 14,
+        module: "MS PowerPoint",
+        title: "Prezentasiyaya giriş",
+        topics: ["Slides", "Layouts", "Themes"],
+      },
+      {
+        week: 15,
+        module: "MS PowerPoint",
+        title: "Dizayn və animasiya",
+        topics: ["Animations", "Transitions", "SmartArt"],
+      },
+      {
+        week: 16,
+        module: "MS PowerPoint",
+        title: "Təqdimat",
+        topics: ["Slide show", "Export", "Print"],
+      },
+    
+      // 5. MS Excel (17–20 həftə) ✅ 4 həftə
+      {
+        week: 17,
+        module: "MS Excel",
+        title: "Excel əsasları",
+        topics: ["Cells", "Rows", "Columns"],
+      },
+      {
+        week: 18,
+        module: "MS Excel",
+        title: "Formullar",
+        topics: ["SUM", "IF", "AVERAGE"],
+      },
+      {
+        week: 19,
+        module: "MS Excel",
+        title: "Məlumat analizi",
+        topics: ["Sort", "Filter", "Charts"],
+      },
+      {
+        week: 20,
+        module: "MS Excel",
+        title: "İrəli səviyyə",
+        topics: ["Conditional formatting", "Macros"],
+      },
+    
+      // 6. HTML (21–23 həftə) ✅ əlavə edildi
+      {
+        week: 21,
+        module: "HTML",
+        title: "HTML əsasları",
+        topics: ["HTML nədir", "Tags", "Head və Body"],
+      },
+      {
+        week: 22,
+        module: "HTML",
+        title: "Struktur elementlər",
+        topics: ["Lists", "Tables", "Images"],
+      },
+      {
+        week: 23,
+        module: "HTML",
+        title: "Formlar",
+        topics: ["Form", "Input", "Button"],
+      },
+    
+      // 7. Scratch (24–27 həftə) ✅ genişləndirildi
+      {
+        week: 24,
+        module: "Scratch",
+        title: "Vizual proqramlaşdırma",
+        topics: ["Alqoritm", "Sprite", "Stage"],
+      },
+      {
+        week: 25,
+        module: "Scratch",
+        title: "Şərtlər və dövrlər",
+        topics: ["If / else", "Loops"],
+      },
+      {
+        week: 26,
+        module: "Scratch",
+        title: "Oyun mexanikası",
+        topics: ["Events", "Collision", "Variables"],
+      },
+      {
+        week: 27,
+        module: "Scratch",
+        title: "Final layihə",
+        topics: ["Oyun və ya animasiya", "Təqdimat"],
+      },
+    ],
+    
   }),
   new Course({
     id: 1005,

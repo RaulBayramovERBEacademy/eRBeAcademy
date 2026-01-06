@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="az">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Səbət - eRBe Academy</title>
+    <link rel="stylesheet" href="../styles/headerStyles/header.css" />
+    <link rel="stylesheet" href="../styles/cart.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header"></header>
+
+    <main class="main">
+      <div class="cart-container">
+        <div class="cart-header">
+          <h1>Səbət</h1>
+          <p id="item-count">Səbətində <span id="count">0</span> kurs var</p>
+        </div>
+
+        <div class="cart-content">
+          <div class="cart-items-section">
+            <div id="cart-items-container">
+              <!-- Cart items will be dynamically rendered here -->
+              <div class="empty-cart-message">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <h2>Səbətiniz boşdur</h2>
+                <p>Səbətinizə kurs əlavə etmək üçün kurslar səhifəsinə keçin</p>
+                <a href="/index.html#courses" class="btn-browse-courses">
+                  Kursları Kəşf Et
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cart-summary-section">
+            <div class="cart-summary">
+              <h3>Sifariş Xülasəsi</h3>
+
+              <div class="summary-item">
+                <span>Yarımçıq qiymət:</span>
+                <span id="subtotal">₼0.00</span>
+              </div>
+
+              <div class="summary-item">
+                <span>Endirim:</span>
+                <span id="discount" class="discount-text">₼0.00</span>
+              </div>
+
+              <div class="summary-divider"></div>
+
+              <div class="summary-item total">
+                <span>Ümumi:</span>
+                <span id="total">₼0.00</span>
+              </div>
+
+              <button id="checkout-btn" class="btn-checkout" disabled>
+                Ödənişə Keç
+                <i class="fa-solid fa-lock"></i>
+              </button>
+
+              <div class="trust-badges">
+                <div class="trust-badge">
+                  <i class="fa-solid fa-shield-halved"></i>
+                  <span>Təhlükəsiz ödəniş</span>
+                </div>
+                <div class="trust-badge">
+                  <i class="fa-solid fa-rotate-left"></i>
+                  <span>Geri qaytarma garantisi</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="promo-section">
+              <h4>Promo kod</h4>
+              <div class="promo-input-wrapper">
+                <input
+                  type="text"
+                  id="promo-code"
+                  placeholder="Promo kodu daxil edin"
+                  class="promo-input"
+                />
+                <button id="apply-promo" class="btn-promo">
+                  <i class="fa-solid fa-check"></i>
+                </button>
+              </div>
+              <p class="promo-message" id="promo-message"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section
+        class="recommended-courses-section"
+        id="recommended-section"
+        hidden
+      >
+        <h2>Sizə Uyğun Kurslar</h2>
+        <div id="recommended-courses" class="recommended-courses-grid"></div>
+      </section>
+    </main>
+
+    <footer class="footer"></footer>
+
+    <script src="../javascript/headerFiles/header.js" type="module"></script>
+    <script src="../javascript/footer.js"></script>
+    <script src="../javascript/cart/cart.js" type="module"></script>
+  </body>
+</html>
