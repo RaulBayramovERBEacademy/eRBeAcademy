@@ -578,7 +578,7 @@ Bununla yanaşı, müəllimlik imtahanını uğurla vermişəm və hal-hazırda 
     level: "Başlanğıc",
     category: "teaching-certification",
     subcategory: "informatics",
-    price: 120,
+    price: 100,
     coverImg: "courses/inf",
     schedule: [
       // 1. Kompüterə giriş və informasiya (1–5 həftə)
