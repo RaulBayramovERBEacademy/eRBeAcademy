@@ -25,6 +25,8 @@ const SUBCATEGORY_LIST = {
     { value: "informatics", label: "İnformatika" },
     { value: "primary-education-teaching", label: "İbtidai sinif müəllimliyi" },
     { value: "english", label: "ingilis-dili" },
+    { value: "physical-education", label: "Idman"},
+    { value: "literature", label: "Ədəbiyyat"}, 
   ],
   "student-exam": [
     { value: "math", label: "Riyaziyyat" },
@@ -111,7 +113,7 @@ Bununla yanaşı, müəllimlik imtahanını uğurla vermişəm və hal-hazırda 
     level: "Orta",
     category: "programming",
     subcategory: "javascript",
-    price: 49,
+    price: 79,
     coverImg: "courses/web",
     discount: 25,
     // 🆕 Həftəlik dərs plan
@@ -249,7 +251,7 @@ Bununla yanaşı, müəllimlik imtahanını uğurla vermişəm və hal-hazırda 
     level: "Başlanğıc",
     category: "programming",
     subcategory: "web-development",
-    price: 49,
+    price: 79,
     coverImg: "courses/web",
     discount: 25,
     schedule: [
@@ -432,7 +434,7 @@ Bununla yanaşı, müəllimlik imtahanını uğurla vermişəm və hal-hazırda 
     level: "Başlanğıc",
     category: "programming",
     subcategory: "HTML/CSS",
-    price: 49,
+    price: 79,
     coverImg: "courses/web",
     discount: 25,
     schedule: [
@@ -556,7 +558,7 @@ Bununla yanaşı, müəllimlik imtahanını uğurla vermişəm və hal-hazırda 
     level: "Başlanğıc",
     category: "programming",
     subcategory: "ict-literacy",
-    price: 49,
+    price: 79,
     coverImg: "courses/ICT",
     discount: 25,
   }),
@@ -578,9 +580,9 @@ Bununla yanaşı, müəllimlik imtahanını uğurla vermişəm və hal-hazırda 
     level: "Başlanğıc",
     category: "teaching-certification",
     subcategory: "informatics",
-    price: 120,
+    price: 100,
     coverImg: "courses/inf",
-    discount: 16.66,
+    discount: 0,
     schedule: [
       // 1. Kompüterə giriş və informasiya (1–5 həftə)
       {
@@ -799,9 +801,9 @@ Bununla yanaşı, müəllimlik imtahanını uğurla vermişəm və hal-hazırda 
     level: "Başlanğıc",
     category: "teaching-certification",
     subcategory: "biology",
-    price: 79,
+    price: 100,
     coverImg: "courses/bio",
-    discount: 25,
+    discount: 0,
   }),
   new Course({
     id: 1006,
@@ -819,9 +821,9 @@ Bununla yanaşı, müəllimlik imtahanını uğurla vermişəm və hal-hazırda 
     level: "Başlanğıc",
     category: "teaching-certification",
     subcategory: "nature",
-    price: 79,
+    price: 100,
     coverImg: "courses/tebiet",
-    discount: 25,
+    discount: 0,
   }),
   new Course({
     id: 1007,
@@ -839,15 +841,55 @@ Bununla yanaşı, müəllimlik imtahanını uğurla vermişəm və hal-hazırda 
     level: "Başlanğıc",
     category: "teaching-certification",
     subcategory: "math-7-12",
-    price: 79,
-    coverImg: "courses/inf",
-    discount: 25,
+    price: 100,
+    coverImg: "courses/riyt7-12",
+    discount: 0,
   }),
   new Course({
     id: 1008,
+    title: "İdman",
+    instructor: new Instructor(
+      "Tamila Aslanova",
+      "İdman müəllimi",
+      "Peşəkar idman müəllimidir. Öz sahəsində uğurlar qazanmış, 10 kredit toplamış və müəllimlik imtahanını uğurla vermişdir.",
+      "/images/tutor_images/tamilaAslanova.jpg"
+    ),
+    description:
+      "Şagirdlərin fiziki inkişafı, sağlam həyat tərzi və idman bacarıqlarının formalaşdırılması üçün nəzərdə tutulmuş peşəkar tədris proqramı.",
+    startDate: "2025-10-01",
+    duration: "26 həftə",
+    level: "Başlanğıc",
+    category: "teaching-certification",
+    subcategory: "physical-education",
+    price: 100,
+    coverImg: "courses/idman",
+    discount: 0,
+  }),  
+  new Course({
+    id: 1009,
+    title: "Ədəbiyyat",
+    instructor: new Instructor(
+      "Tamila Aslanova",
+      "Ədəbiyyat müəllimi",
+      "Peşəkar ədəbiyyat müəllimidir. Şagirdlərə ədəbiyyatın əsas anlayışlarını, mətn təhlilini və imtahanlara effektiv hazırlığı yüksək səviyyədə öyrədir.",
+      "/images/tutor_images/tamilaAslanova.jpg"
+    ),
+    description:
+      "Ədəbiyyat fənni üzrə mövzuların sistemli izahı, mətnlərin analizi və şagirdlərin düşünmə bacarıqlarının inkişafı üçün hazırlanmış kurs.",
+    startDate: "2025-10-01",
+    duration: "26 həftə",
+    level: "Başlanğıc",
+    category: "teaching-certification",
+    subcategory: "literature",
+    price: 100,
+    coverImg: "courses/edebiyyat",
+    discount: 0,
+  }),
+  new Course({
+    id: 1010,
     title: "Riyaziyyat (1-6)",
     instructor: new Instructor(
-      "Ilkin Mustafayev",
+      "Raul Bayramov",
       "Riyaziyyat müəllimi",
       "1–12-ci siniflər üzrə sertifikatlı riyaziyyat müəllimi, 3+ illik repetitorluq təcrübəsinə malikdir, 50+ uğurlu tələbə yetişdirmişdir.",
       "/images/tutor_images/ilkinMustafayev.jpg"
@@ -861,12 +903,12 @@ Bununla yanaşı, müəllimlik imtahanını uğurla vermişəm və hal-hazırda 
     level: "Orta",
     category: "teaching-certification",
     subcategory: "math-1-6",
-    price: 79,
+    price: 100,
     coverImg: "courses/riyt16",
-    discount: 25,
+    discount: 0,
   }),
   new Course({
-    id: 1009,
+    id: 1011,
     title: "Milli İmtahana Hazırlıq - Riyaziyyat",
     instructor: new Instructor(
       "Ilkin Mustafayev",
@@ -881,29 +923,29 @@ Bununla yanaşı, müəllimlik imtahanını uğurla vermişəm və hal-hazırda 
     level: "Başlanğıc",
     category: "student-exam",
     subcategory: "math",
-    price: 59,
-    coverImg: "courses/inf",
-    discount: 25,
+    price: 80,
+    coverImg: "courses/hazirliq-riyt",
+    discount:0,
   }),
   new Course({
-    id: 1010,
-    title: "Milli İmtahana Hazırlıq - Bialogiya",
+    id: 1012,
+    title: "İbtidai sinif müəllimliyi",
     instructor: new Instructor(
-      "Ellada Bayramova",
-      "Biologiya və təbiət elmləri üzrə müəllim, tutor",
-      "Biologiya və təbiət elmləri üzrə sertifikatlı müəllim, 2+ illik müəllimlik və 2+ illik repetitorluq təcrübəsinə malikdir.",
-      "/images/tutor_images/elladaBayramova.jpg"
+      "Tamila Aslanova",
+      "İbtidai sinif müəllimi",
+      "Peşəkar ibtidai sinif müəllimidir. Şagirdlərin əsas bilik və bacarıqlarını inkişaf etdirmək, öyrənmə prosesini maraqlı və effektiv etmək üzrə təcrübəlidir.",
+      "/images/tutor_images/tamilaAslanova.jpg"
     ),
     description:
-      "Canlıların quruluşu, funksiyaları və ekosistemlərlə əlaqələrini dərindən öyrən.",
+      "İbtidai sinif şagirdləri üçün əsas fənnlər üzrə biliklərin sistemli izahı, öyrənməni əyləncəli və effektiv edən metodlarla tədris.",
     startDate: "2025-10-01",
     duration: "26 həftə",
     level: "Başlanğıc",
-    category: "student-exam",
-    subcategory: "biology",
-    price: 79,
-    coverImg: "courses/bio",
-    discount: 25,
+    category: "teaching-certification",
+    subcategory: "primary-education-teaching",
+    price: 100,
+    coverImg: "courses/ibtidai",
+    discount: 0,
   }),
 ];
 
